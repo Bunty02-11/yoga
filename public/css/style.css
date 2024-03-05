@@ -583,7 +583,7 @@ form .pbmit-footer-newsletter button:hover .pbmit-button-icon{
 	padding: 0 30px;
 }
 .testimonial-three_bg{
-	background-image: url(../images/homepage-3/9.jpg);
+	background-image: url('../images/homepage-3/9.jpg');
     background-position: bottom center;
     background-repeat: no-repeat;
 	padding: 235px 0px 200px 0px;

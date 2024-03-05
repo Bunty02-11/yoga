@@ -1,17 +1,51 @@
-import React,{useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
 import Marquee from '../Marquee/Marquee';
 
 function Home() {
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const reloadBlogPage = () => {
     navigate("/blog");
     window.scrollTo(0, 0);
     window.location.reload();
   }
+  const slides = [
+    {
+      image: 'https://res.cloudinary.com/dsj9t6adh/image/upload/v1709641660/yh4uqbumc5s1qgf2hqzq.jpg',
+      // caption: 'Practice positive energy. Relax your mind and body.'
+    },
+    {
+      image: 'https://res.cloudinary.com/dsj9t6adh/image/upload/v1709644473/vw3nbqsaq7zizvjmygtt.jpg',
+      // caption: 'Practice positive energy. Relax your mind and body.'
+    }
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
+    }, 10000); // Rotate every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  
 
   return (
     <div>
@@ -51,461 +85,32 @@ function Home() {
               </li>
             </ul>
           </div>
-          <div className="pbmit-slider-area">
-            {/* START Slider Demo 03 REVOLUTION SLIDER 6.6.17 */}
-            <p className="rs-p-wp-fix" />
-            <rs-module-wrap
-              id="rev_slider_1_3_wrapper"
-              data-alias="slider-demo-03"
-              data-source="gallery"
+          {/*  */}
+          <div style={{ position: 'relative', overflow: 'hidden' }}>
+            <div
               style={{
-                visibility: "hidden",
-                background: "transparent",
-                padding: 0,
-                margin: "0px auto",
-                marginTop: 0,
-                marginBottom: 0
+                display: 'flex',
+                transition: 'transform 0.5s ease',
+                transform: `translateX(-${currentIndex * 100}%)`
               }}
             >
-              <rs-module id="rev_slider_1_3" data-version="6.6.17">
-                <rs-slides style={{ overflow: "hidden", position: "absolute" }}>
-
-                  <rs-slide
-                    style={{ position: "absolute" }}
-                    data-key="rs-2"
-                    data-title="Slide"
-                    data-in="o:0;"
-                    data-out="a:false;"
-                  >
-                    <img
-                      src="revolution/images/transparent.png"
-                      alt="Slide"
-                      className="rev-slidebg tp-rs-img"
-                      data-bg="c:#448c74;"
-                      data-no-retina=""
-                    />
-                    {/*
-                 */}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-0"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;yo:708px,570px,418px,327px;"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:197px,150px,120px,74px;h:79px,60px,48px,29px;"
-                      data-vbility="t,t,t,f"
-                      data-frame_0="x:-100%;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="st:3530;sp:1000;sR:3530;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:4470;"
-                      style={{ zIndex: 12 }}
-                    >
-                      {/* <img
-                        src="revolution/images/icon-img.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={197}
-                        height={79}
-                        data-no-retina=""
-                      /> */}
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-1"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:-206px,-144px,-89px,-27px;"
-                      data-text="w:normal;s:12,12,9,8;l:24,24,18,15;ls:1px,0px,0px,0px;fw:500;"
-                      data-padding="t:2,1,1,1;r:18,15,11,7;b:2,1,1,1;l:18,15,11,7;"
-                      data-border="bos:solid;boc:#ffffff;bow:1px,1px,1px,1px;bor:20px,20px,20px,20px;"
-                      data-frame_0="sX:2;sY:2;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="e:power2.out;st:600;sp:1200;sR:600;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:7200;"
-                      style={{
-                        zIndex: 8,
-                        fontFamily: '"Sora"',
-                        textTransform: "uppercase"
-                      }}
-                    >
-                      Practice positive energy
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-2"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:-84px,-58px,-22px,24px;"
-                      data-text="w:normal;s:80,56,42,28;l:80,56,42,28;fw:500;"
-                      data-frame_0="x:-100%;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="y:-7px,-4px,-3px,-1px;st:1380;sp:1000;sR:1380;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:8900;sR:6520;"
-                      style={{ zIndex: 9, fontFamily: '"Sora"' }}
-                    >
-                      Relax your{" "}
-                      <span>
-                        mind
-                        <br /> and body.
-                      </span>
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-3"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-xy="x:l,l,r,r;xo:690px,427px,0,0;y:m;yo:0,30px,30px,40px;"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:920px,600px,400px,246px;h:626px,408px,272px,167px;"
-                      data-blendmode="luminosity"
-                      data-frame_0="sX:0.9;sY:0.9;"
-                      data-frame_1="e:power2.inOut;st:190;sp:1000;"
-                      data-frame_999="o:0;st:w;sR:7810;"
-                      data-tloop="u:true;"
-                      data-loop_0="y:-10;"
-                      data-loop_999="y:10;sp:6000;e:sine.inOut;yym:t;"
-                      style={{ zIndex: 7 }}
-                    >
-                      <img
-                        src="revolution/images/demo3-slider-2.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={956}
-                        height={650}
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-5"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:57px,39px,29px,17px;"
-                      data-text="w:normal;s:18,13,9,5;l:30,22,16,9;"
-                      data-dim="w:675px,473px,359px,221px;"
-                      data-vbility="t,t,f,f"
-                      data-padding="t:20,14,11,7;"
-                      data-border="bos:solid;boc:rgba(255, 255, 255, 0.5);bow:1px,0,0,0;"
-                      data-frame_0="sX:0.9;sY:0.9;"
-                      data-frame_1="e:power2.inOut;st:1950;sp:1000;sR:1950;"
-                      data-frame_999="o:0;st:w;sR:6050;"
-                      style={{ zIndex: 10, fontFamily: '"Roboto"' }}
-                    >
-                      You cannot always control what goes on outside, but you can
-                      always control <br />
-                      what goes on inside! Happy Yoga Day.
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <a
-                      id="slider-1-slide-2-layer-6"
-                      className="rs-layer pbmit-rev-btn rev-btn"
-                      href="contact-us.html"
-                      target="_self"
-                      data-type="button"
-                      data-color="#000000"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:159px,121px,60px,94px;"
-                      data-text="w:normal;s:12;l:36,36,36,34;fw:500;"
-                      data-dim="minh:0px,none,none,none;"
-                      data-padding="t:12,12,10,6;r:35,35,30,25;b:12,12,10,6;l:35,35,30,25;"
-                      data-border="bor:30px,30px,30px,30px;"
-                      data-frame_1="e:power4.inOut;st:2490;sp:1500;sR:2490;"
-                      data-frame_999="o:0;st:w;sR:5010;"
-                      data-frame_hover="c:#fff;bgc:#000;bor:30px,30px,30px,30px;sp:600ms;"
-                      style={{
-                        zIndex: 11,
-                        backgroundColor: "rgba(255,255,255,1)",
-                        fontFamily: '"Sora"',
-                        textTransform: "uppercase"
-                      }}
-                    >
-                      Contact Us{" "}
-                      <span className="pbmit-button-icon-wrapper">
-                        <span className="pbmit-button-icon">
-                          <i className="pbmit-base-icon-black-arrow-1" />
-                        </span>
-                      </span>
-                    </a>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-7"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:261px,190px,152px,93px;yo:729px,585px,429px,334px;"
-                      data-text="w:normal;s:17,15,12,7;l:24,20,16,9;fw:500;"
-                      data-vbility="t,t,t,f"
-                      data-frame_0="sX:2;sY:2;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="e:power2.out;st:4190;sp:1000;sR:4190;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:3810;"
-                      style={{ zIndex: 13, fontFamily: '"Sora"' }}
-                    >
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-2-layer-8"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:['100%','100%','100%','100%'];h:['100%','100%','100%','100%'];"
-                      data-basealign="slide"
-                      data-frame_999="o:0;st:w;sR:8700;"
-                      style={{ zIndex: 6 }}
-                    >
-                      <img
-                        src="revolution/images/slider-pattern.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={1900}
-                        height={941}
-                        data-c="cover-proportional"
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
-                 */}{" "}
-                  </rs-slide>
-                  <rs-slide
-                    style={{ position: "absolute" }}
-                    data-key="rs-3"
-                    data-title="Slide"
-                    data-in="o:0;"
-                    data-out="a:false;"
-                  >
-                    <img
-                      src="revolution/images/transparent.png"
-                      alt="Slide"
-                      className="rev-slidebg tp-rs-img"
-                      data-bg="c:#448c74;"
-                      data-no-retina=""
-                    />
-                    {/*
-                 */}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-0"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;yo:708px,570px,418px,327px;"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:197px,150px,120px,74px;h:79px,60px,48px,29px;"
-                      data-vbility="t,t,t,f"
-                      data-frame_0="x:-100%;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="st:3530;sp:1000;sR:3530;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:4470;"
-                      style={{ zIndex: 12 }}
-                    >
-                      {/* <img
-                        src="revolution/images/icon-img.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={197}
-                        height={79}
-                        data-no-retina=""
-                      /> */}
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-1"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:-206px,-144px,-89px,-54px;"
-                      data-text="w:normal;s:12,12,9,8;l:24,24,18,15;ls:1px,0px,0px,0px;fw:500;"
-                      data-padding="t:2,1,1,1;r:18,15,11,7;b:2,1,1,1;l:18,15,11,7;"
-                      data-border="bos:solid;boc:#ffffff;bow:1px,1px,1px,1px;bor:20px,20px,20px,20px;"
-                      data-frame_0="sX:2;sY:2;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="e:power2.out;st:820;sp:1200;sR:820;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:6980;"
-                      style={{
-                        zIndex: 8,
-                        fontFamily: '"Sora"',
-                        textTransform: "uppercase"
-                      }}
-                    >
-                      Practice positive energy
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-2"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:-84px,-58px,-22px,-16px;"
-                      data-text="w:normal;s:80,56,42,28;l:80,56,42,28;fw:500;"
-                      data-frame_0="x:-100%;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="y:-7px,-4px,-3px,-1px;st:1380;sp:1000;sR:1380;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:8900;sR:6520;"
-                      style={{ zIndex: 9, fontFamily: '"Sora"' }}
-                    >
-                      Relax your{" "}
-                      <span>
-                        mind
-                        <br /> and body.
-                      </span>
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-3"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-xy="xo:690px,427px,324px,199px;yo:92px,154px,117px,122px;"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:920px,600px,455px,280px;h:777px,507px,385px,237px;"
-                      data-frame_0="sX:0.9;sY:0.9;"
-                      data-frame_1="e:power2.inOut;st:190;sp:1000;"
-                      data-frame_999="o:0;st:w;sR:7810;"
-                      data-tloop="u:true;"
-                      data-loop_0="y:-10;"
-                      data-loop_999="y:10;sp:6000;e:sine.inOut;yym:t;"
-                      style={{ zIndex: 7 }}
-                    >
-                      <img
-                        src="revolution/images/1.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={920}
-                        height={777}
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-5"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:57px,39px,29px,17px;"
-                      data-text="w:normal;s:18,13,9,5;l:30,22,16,9;"
-                      data-dim="w:675px,473px,359px,221px;"
-                      data-vbility="t,t,f,f"
-                      data-padding="t:20,14,11,7;"
-                      data-border="bos:solid;boc:rgba(255, 255, 255, 0.5);bow:1px,0,0,0;"
-                      data-frame_0="sX:0.9;sY:0.9;"
-                      data-frame_1="e:power2.inOut;st:1950;sp:1000;sR:1950;"
-                      data-frame_999="o:0;st:w;sR:6050;"
-                      style={{ zIndex: 10, fontFamily: '"Roboto"' }}
-                    >
-                      You cannot always control what goes on outside, but you can
-                      always control <br />
-                      what goes on inside! Happy Yoga Day.
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <a
-                      id="slider-1-slide-3-layer-6"
-                      className="rs-layer pbmit-rev-btn rev-btn"
-                      href="contact-us.html"
-                      target="_self"
-                      data-type="button"
-                      data-color="#000000"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,22px,16px,9px;y:m;yo:159px,121px,60px,54px;"
-                      data-text="w:normal;s:12;l:36,36,36,34;fw:500;"
-                      data-dim="minh:0px,none,none,none;"
-                      data-padding="t:12,12,10,6;r:35,35,30,25;b:12,12,10,6;l:35,35,30,25;"
-                      data-border="bor:30px,30px,30px,30px;"
-                      data-frame_1="e:power4.inOut;st:2490;sp:1500;sR:2490;"
-                      data-frame_999="o:0;st:w;sR:5010;"
-                      data-frame_hover="c:#fff;bgc:#000;bor:30px,30px,30px,30px;sp:600ms;"
-                      style={{
-                        zIndex: 11,
-                        backgroundColor: "rgba(255,255,255,1)",
-                        fontFamily: '"Sora"',
-                        textTransform: "uppercase"
-                      }}
-                    >
-                      Contact Us{" "}
-                      <span className="pbmit-button-icon-wrapper">
-                        <span className="pbmit-button-icon">
-                          <i className="pbmit-base-icon-black-arrow-1" />
-                        </span>
-                      </span>
-                    </a>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-7"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:261px,190px,152px,93px;yo:729px,585px,429px,334px;"
-                      data-text="w:normal;s:17,15,12,7;l:24,20,16,9;fw:500;"
-                      data-vbility="t,t,t,f"
-                      data-frame_0="sX:2;sY:2;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="e:power2.out;st:4190;sp:1000;sR:4190;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:3810;"
-                      style={{ zIndex: 13, fontFamily: '"Sora"' }}
-                    >
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-3-layer-8"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:['100%','100%','100%','100%'];h:['100%','100%','100%','100%'];"
-                      data-basealign="slide"
-                      data-frame_999="o:0;st:w;sR:8700;"
-                      style={{ zIndex: 6 }}
-                    >
-                      <img
-                        src="revolution/images/slider-pattern.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={1900}
-                        height={941}
-                        data-c="cover-proportional"
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
-                 */}{" "}
-                  </rs-slide>
-                </rs-slides>
-              </rs-module>
-            </rs-module-wrap>
-            {/* END REVOLUTION SLIDER */}
+              {slides.map((slide, index) => (
+                <div key={index} style={{ flex: '0 0 100%', minWidth: '100%', position: 'relative' }}>
+                  <img src={slide.image} alt={`Slide ${index + 1}`} style={{ width: '100%', height: windowWidth <= 768 ? '450px' : '100%', objectFit: 'cover', objectPosition: 'center' }} />
+                  <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', color: 'white', textAlign: 'center' }}>
+                    <h2>{slide.caption}</h2>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+          {/*  */}
         </header>
         {/* Header Main Area End Here */}
         {/* page content */}
         <div className="page-content pbmit-bg-color-light">
           {/* Marquee */}
-         <Marquee/>
+          <Marquee />
           {/* Marquee end */}
           {/* Tab Start */}
           <section >
@@ -1387,7 +992,7 @@ function Home() {
           </section> */}
           {/* Counter End */}
           {/* Pricing Start */}
-          <section className="section-xl">
+          {/* <section className="section-xl"> */}
             {/* <div className="container">
               <div className="pbmit-heading-subheading animation-style2">
                 <h4 className="pbmit-subtitle">my price</h4>
@@ -1636,295 +1241,10 @@ function Home() {
                 </div>
               </div>
             </div> */}
-          </section>
+          {/* </section> */}
           {/* Pricing End */}
           {/* Testimonial Start */}
-          <section className="testimonial-three_bg">
-            <div className="container">
-              <div className="row g-0">
-                <div className="col-md-8 pbmit-col_1" />
-                <div className="col-md-4 pbmit-col_2">
-                  <div
-                    className="swiper-slider"
-                    data-autoplay="true"
-                    data-loop="true"
-                    data-dots="false"
-                    data-arrows="false"
-                    data-columns={1}
-                    data-margin={30}
-                    data-effect="slide"
-                  >
-                    <div className="swiper-wrapper">
-                      {/* Slide1 */}
-                      <article className="pbmit-testimonial-style-3 swiper-slide">
-                        <div className="pbminfotech-post-item">
-                          <div className="pbmit-box-content-wrap">
-                            <div className="pbminfotech-box-star-ratings">
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                            </div>
-                            <div className="pbminfotech-box-desc">
-                              <blockquote className="pbminfotech-testimonial-text">
-                                <p>
-                                  I would recommend practitioners at this center to
-                                  everyone! They are great to work with and are
-                                  excellemt trainers. Thank you all!
-                                </p>
-                              </blockquote>
-                            </div>
-                            <div className="pbminfotech-box-author d-flex align-items-center">
-                              <div className="pbminfotech-box-img">
-                                <div className="pbmit-featured-img-wrapper">
-                                  <div className="pbmit-featured-wrapper">
-                                    <img
-                                      src="images/homepage-3/testimonial/testimonial-01.jpg"
-                                      alt=""
-                                      className="img-fluid"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="pbmit-auther-content">
-                                <h3 className="pbminfotech-box-title">
-                                  Maria Flynn
-                                </h3>
-                                <div className="pbminfotech-testimonial-detail">
-                                  Satisfied Client
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      {/* Slide2 */}
-                      <article className="pbmit-testimonial-style-3 swiper-slide">
-                        <div className="pbminfotech-post-item">
-                          <div className="pbmit-box-content-wrap">
-                            <div className="pbminfotech-box-star-ratings">
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                            </div>
-                            <div className="pbminfotech-box-desc">
-                              <blockquote className="pbminfotech-testimonial-text">
-                                <p>
-                                  I would recommend practitioners at this center to
-                                  everyone! They are great to work with and are
-                                  excellemt trainers. Thank you all!
-                                </p>
-                              </blockquote>
-                            </div>
-                            <div className="pbminfotech-box-author d-flex align-items-center">
-                              <div className="pbminfotech-box-img">
-                                <div className="pbmit-featured-img-wrapper">
-                                  <div className="pbmit-featured-wrapper">
-                                    <img
-                                      src="images/homepage-3/testimonial/testimonial-02.jpg"
-                                      alt=""
-                                      className="img-fluid"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="pbmit-auther-content">
-                                <h3 className="pbminfotech-box-title">
-                                  Jennifer Smith
-                                </h3>
-                                <div className="pbminfotech-testimonial-detail">
-                                  Satisfied Client
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      {/* Slide3 */}
-                      <article className="pbmit-testimonial-style-3 swiper-slide">
-                        <div className="pbminfotech-post-item">
-                          <div className="pbmit-box-content-wrap">
-                            <div className="pbminfotech-box-star-ratings">
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                            </div>
-                            <div className="pbminfotech-box-desc">
-                              <blockquote className="pbminfotech-testimonial-text">
-                                <p>
-                                  I would recommend practitioners at this center to
-                                  everyone! They are great to work with and are
-                                  excellemt trainers. Thank you all!
-                                </p>
-                              </blockquote>
-                            </div>
-                            <div className="pbminfotech-box-author d-flex align-items-center">
-                              <div className="pbminfotech-box-img">
-                                <div className="pbmit-featured-img-wrapper">
-                                  <div className="pbmit-featured-wrapper">
-                                    <img
-                                      src="images/homepage-3/testimonial/testimonial-03.jpg"
-                                      alt=""
-                                      className="img-fluid"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="pbmit-auther-content">
-                                <h3 className="pbminfotech-box-title">
-                                  Jane Brown
-                                </h3>
-                                <div className="pbminfotech-testimonial-detail">
-                                  Satisfied Client
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      {/* Slide4 */}
-                      <article className="pbmit-testimonial-style-3 swiper-slide">
-                        <div className="pbminfotech-post-item">
-                          <div className="pbmit-box-content-wrap">
-                            <div className="pbminfotech-box-star-ratings">
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                            </div>
-                            <div className="pbminfotech-box-desc">
-                              <blockquote className="pbminfotech-testimonial-text">
-                                <p>
-                                  I would recommend practitioners at this center to
-                                  everyone! They are great to work with and are
-                                  excellemt trainers. Thank you all!
-                                </p>
-                              </blockquote>
-                            </div>
-                            <div className="pbminfotech-box-author d-flex align-items-center">
-                              <div className="pbminfotech-box-img">
-                                <div className="pbmit-featured-img-wrapper">
-                                  <div className="pbmit-featured-wrapper">
-                                    <img
-                                      src="images/homepage-3/testimonial/testimonial-04.jpg"
-                                      alt=""
-                                      className="img-fluid"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="pbmit-auther-content">
-                                <h3 className="pbminfotech-box-title">
-                                  Becky Linch
-                                </h3>
-                                <div className="pbminfotech-testimonial-detail">
-                                  Satisfied Client
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      {/* Slide5 */}
-                      <article className="pbmit-testimonial-style-3 swiper-slide">
-                        <div className="pbminfotech-post-item">
-                          <div className="pbmit-box-content-wrap">
-                            <div className="pbminfotech-box-star-ratings">
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                            </div>
-                            <div className="pbminfotech-box-desc">
-                              <blockquote className="pbminfotech-testimonial-text">
-                                <p>
-                                  I would recommend practitioners at this center to
-                                  everyone! They are great to work with and are
-                                  excellemt trainers. Thank you all!
-                                </p>
-                              </blockquote>
-                            </div>
-                            <div className="pbminfotech-box-author d-flex align-items-center">
-                              <div className="pbminfotech-box-img">
-                                <div className="pbmit-featured-img-wrapper">
-                                  <div className="pbmit-featured-wrapper">
-                                    <img
-                                      src="images/homepage-3/testimonial/testimonial-05.jpg"
-                                      alt=""
-                                      className="img-fluid"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="pbmit-auther-content">
-                                <h3 className="pbminfotech-box-title">
-                                  Daniel Craig
-                                </h3>
-                                <div className="pbminfotech-testimonial-detail">
-                                  Satisfied Client
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      {/* Slide6 */}
-                      <article className="pbmit-testimonial-style-3 swiper-slide">
-                        <div className="pbminfotech-post-item">
-                          <div className="pbmit-box-content-wrap">
-                            <div className="pbminfotech-box-star-ratings">
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                              <i className="pbmit-base-icon-star-1 pbmit-active" />
-                            </div>
-                            <div className="pbminfotech-box-desc">
-                              <blockquote className="pbminfotech-testimonial-text">
-                                <p>
-                                  I would recommend practitioners at this center to
-                                  everyone! They are great to work with and are
-                                  excellemt trainers. Thank you all!
-                                </p>
-                              </blockquote>
-                            </div>
-                            <div className="pbminfotech-box-author d-flex align-items-center">
-                              <div className="pbminfotech-box-img">
-                                <div className="pbmit-featured-img-wrapper">
-                                  <div className="pbmit-featured-wrapper">
-                                    <img
-                                      src="images/homepage-3/testimonial/testimonial-06.jpg"
-                                      alt=""
-                                      className="img-fluid"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="pbmit-auther-content">
-                                <h3 className="pbminfotech-box-title">
-                                  Mariam Ness
-                                </h3>
-                                <div className="pbminfotech-testimonial-detail">
-                                  Satisfied Client
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+    
           {/* Testimonial End */}
           {/* Blog Start */}
           <section className="section-xl">
@@ -1956,7 +1276,7 @@ function Home() {
                           className="pbmit-bg-image"
                           style={{
                             backgroundImage:
-                              "url(images/homepage-2/blog/blog-img-01.jpg)"
+                              "url(https://res.cloudinary.com/dsj9t6adh/image/upload/v1709647115/e34h7g4nhm5arhjqlda2.jpg)"
                           }}
                         >
                           <div className="pbmit-featured-img-wrapper">
