@@ -1,13 +1,13 @@
 import React from 'react'
-import Header from '../Component/Layout/Header'
-import Footer from '../Component/Layout/Footer'
+import Header from '../Layout/Header'
+import Footer from '../Layout/Footer'
 
 function About() {
     return (
         <div>
             <div className="page-wrapper">
                 {/* Header Main Area */}
-                <Header />
+                <Header/>
                 {/* Header Main Area End Here */}
                 {/* Title Bar */}
                 <div className="pbmit-title-bar-wrapper">

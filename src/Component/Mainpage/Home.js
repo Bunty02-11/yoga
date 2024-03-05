@@ -1,14 +1,24 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
+import Marquee from '../Marquee/Marquee';
 
 function Home() {
+  const navigate = useNavigate();
+
+  const reloadBlogPage = () => {
+    navigate("/blog");
+    window.scrollTo(0, 0);
+    window.location.reload();
+  }
+
   return (
     <div>
-        <div className="page-wrapper">
+      <div className="page-wrapper">
         {/* Header Main Area */}
         <header className="site-header header-style-3">
-        <Header/>
+          <Header />
           <div className="pbmit-slider-social">
             <ul className="pbmit-social-links">
               <li className="pbmit-social-li pbmit-social-facebook">
@@ -59,224 +69,7 @@ function Home() {
             >
               <rs-module id="rev_slider_1_3" data-version="6.6.17">
                 <rs-slides style={{ overflow: "hidden", position: "absolute" }}>
-                  <rs-slide
-                    style={{ position: "absolute" }}
-                    data-key="rs-1"
-                    data-title="Slide"
-                    data-in="o:0;"
-                    data-out="a:false;"
-                  >
-                    <img
-                      src="revolution/images/transparent.png"
-                      alt="Slide"
-                      className="rev-slidebg tp-rs-img"
-                      data-bg="c:#448c74;"
-                      data-no-retina=""
-                    />
-                    {/*
-                 */}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-0"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,30px,30px,29px;yo:708px,570px,433px,327px;"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:197px,150px,120px,74px;h:79px,60px,48px,29px;"
-                      data-vbility="t,t,t,f"
-                      data-frame_0="x:-100%;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="st:3530;sp:1000;sR:3530;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:4470;"
-                      style={{ zIndex: 12 }}
-                    >
-                      <img
-                        src="revolution/images/icon-img.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={197}
-                        height={79}
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
 
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-1"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px;y:m;yo:-206px,-144px,-74px,-27px;"
-                      data-text="w:normal;s:12,12,12,10;l:24,24,20,17;ls:1px,0px,0px,0px;fw:500;"
-                      data-padding="t:2,1,0,0;r:18,15,0,0;b:2,1,0,0;l:18,15,0,0;"
-                      data-border="bos:solid,solid,none,none;boc:#ffffff;bow:1px,1px,1px,1px;bor:20px,20px,20px,20px;"
-                      data-frame_0="sX:2;sY:2;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="e:power2.out;st:600;sp:1200;sR:600;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:7200;"
-                      style={{
-                        zIndex: 8,
-                        fontFamily: '"Sora"',
-                        textTransform: "uppercase"
-                      }}
-                    >
-                      Practice positive energy
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-2"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px;y:m;yo:-84px,-58px,-7px,24px;"
-                      data-text="w:normal;s:80,56,42,28;l:80,56,42,28;fw:500;"
-                      data-frame_0="x:-100%;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="y:-7px,-4px,-3px,-1px;st:1380;sp:1000;sR:1380;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:8900;sR:6520;"
-                      style={{ zIndex: 9, fontFamily: '"Sora"' }}
-                    >
-                      Relax your{" "}
-                      <span>
-                        mind
-                        <br /> and body.
-                      </span>
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-3"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-xy="xo:690px,427px,326px,199px;y:m;yo:30px,40px,30px,40px;"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:920px,600px,455px,280px;h:777px,507px,385px,237px;"
-                      data-frame_0="sX:0.9;sY:0.9;"
-                      data-frame_1="e:power2.inOut;st:190;sp:1000;"
-                      data-frame_999="o:0;st:w;sR:7810;"
-                      data-tloop="u:true;"
-                      data-loop_0="y:-10;"
-                      data-loop_999="y:10;sp:6000;e:sine.inOut;yym:t;"
-                      style={{ zIndex: 7 }}
-                    >
-                      <img
-                        src="revolution/images/demo3-slider-1.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={920}
-                        height={777}
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-5"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px,30px,34px,40px;y:m;yo:57px,39px,29px,17px;"
-                      data-text="w:normal;s:18,13,9,5;l:30,22,16,9;"
-                      data-dim="w:675px,473px,359px,221px;"
-                      data-vbility="t,t,f,f"
-                      data-padding="t:20,14,11,7;"
-                      data-border="bos:solid;boc:rgba(255, 255, 255, 0.5);bow:1px,0,0,0;"
-                      data-frame_0="sX:0.9;sY:0.9;"
-                      data-frame_1="e:power2.inOut;st:1950;sp:1000;sR:1950;"
-                      data-frame_999="o:0;st:w;sR:6050;"
-                      style={{ zIndex: 10, fontFamily: '"Roboto"' }}
-                    >
-                      You cannot always control what goes on outside, but you can
-                      always control <br />
-                      what goes on inside! Happy Yoga Day.
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <a
-                      id="slider-1-slide-1-layer-6"
-                      className="rs-layer pbmit-rev-btn rev-btn"
-                      href="contact-us.html"
-                      target="_self"
-                      data-type="button"
-                      data-color="#000000"
-                      data-rsp_ch="on"
-                      data-xy="xo:30px;y:m;yo:159px,121px,75px,94px;"
-                      data-text="w:normal;s:12;l:36,36,36,34;fw:500;"
-                      data-dim="minh:0px,none,none,none;"
-                      data-padding="t:12,12,10,6;r:35,35,30,25;b:12,12,10,6;l:35,35,30,25;"
-                      data-border="bor:30px,30px,30px,30px;"
-                      data-frame_1="e:power4.inOut;st:2490;sp:1500;sR:2490;"
-                      data-frame_999="o:0;st:w;sR:5010;"
-                      data-frame_hover="c:#fff;bgc:#000;bor:30px,30px,30px,30px;sp:600ms;"
-                      style={{
-                        zIndex: 11,
-                        backgroundColor: "rgba(255,255,255,1)",
-                        fontFamily: '"Sora"',
-                        textTransform: "uppercase"
-                      }}
-                    >
-                      Contact Us{" "}
-                      <span className="pbmit-button-icon-wrapper">
-                        <span className="pbmit-button-icon">
-                          <i className="pbmit-base-icon-black-arrow-1" />
-                        </span>
-                      </span>
-                    </a>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-7"
-                      data-type="text"
-                      data-rsp_ch="on"
-                      data-xy="xo:261px,198px,166px,113px;yo:729px,585px,444px,334px;"
-                      data-text="w:normal;s:17,15,12,7;l:24,20,16,9;fw:500;"
-                      data-vbility="t,t,t,f"
-                      data-frame_0="sX:2;sY:2;"
-                      data-frame_0_mask="u:t;"
-                      data-frame_1="e:power2.out;st:4190;sp:1000;sR:4190;"
-                      data-frame_1_mask="u:t;"
-                      data-frame_999="o:0;st:w;sR:3810;"
-                      style={{ zIndex: 13, fontFamily: '"Sora"' }}
-                    >
-                      More than
-                      <span className="pbmit-color-secondarycolor">
-                        9.5k members
-                      </span>{" "}
-                      are <br />
-                      connected with us
-                    </rs-layer>
-                    {/*
-
-								*/}
-                    <rs-layer
-                      id="slider-1-slide-1-layer-8"
-                      data-type="image"
-                      data-rsp_ch="on"
-                      data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                      data-dim="w:['100%','100%','100%','100%'];h:['100%','100%','100%','100%'];"
-                      data-basealign="slide"
-                      data-frame_999="o:0;st:w;sR:8700;"
-                      style={{ zIndex: 5 }}
-                    >
-                      <img
-                        src="revolution/images/slider-pattern-1536x761.png"
-                        alt=""
-                        className="tp-rs-img"
-                        width={1536}
-                        height={761}
-                        data-c="cover-proportional"
-                        data-no-retina=""
-                      />
-                    </rs-layer>
-                    {/*
-                 */}{" "}
-                  </rs-slide>
                   <rs-slide
                     style={{ position: "absolute" }}
                     data-key="rs-2"
@@ -308,14 +101,14 @@ function Home() {
                       data-frame_999="o:0;st:w;sR:4470;"
                       style={{ zIndex: 12 }}
                     >
-                      <img
+                      {/* <img
                         src="revolution/images/icon-img.png"
                         alt=""
                         className="tp-rs-img"
                         width={197}
                         height={79}
                         data-no-retina=""
-                      />
+                      /> */}
                     </rs-layer>
                     {/*
 
@@ -463,12 +256,6 @@ function Home() {
                       data-frame_999="o:0;st:w;sR:3810;"
                       style={{ zIndex: 13, fontFamily: '"Sora"' }}
                     >
-                      More than
-                      <span className="pbmit-color-secondarycolor">
-                        9.5k members
-                      </span>{" "}
-                      are <br />
-                      connected with us
                     </rs-layer>
                     {/*
 
@@ -527,14 +314,14 @@ function Home() {
                       data-frame_999="o:0;st:w;sR:4470;"
                       style={{ zIndex: 12 }}
                     >
-                      <img
+                      {/* <img
                         src="revolution/images/icon-img.png"
                         alt=""
                         className="tp-rs-img"
                         width={197}
                         height={79}
                         data-no-retina=""
-                      />
+                      /> */}
                     </rs-layer>
                     {/*
 
@@ -601,7 +388,7 @@ function Home() {
                       style={{ zIndex: 7 }}
                     >
                       <img
-                        src="revolution/images/demo3-slider-3.png"
+                        src="revolution/images/1.png"
                         alt=""
                         className="tp-rs-img"
                         width={920}
@@ -681,12 +468,6 @@ function Home() {
                       data-frame_999="o:0;st:w;sR:3810;"
                       style={{ zIndex: 13, fontFamily: '"Sora"' }}
                     >
-                      More than
-                      <span className="pbmit-color-secondarycolor">
-                        9.5k members
-                      </span>{" "}
-                      are <br />
-                      connected with us
                     </rs-layer>
                     {/*
 
@@ -724,48 +505,7 @@ function Home() {
         {/* page content */}
         <div className="page-content pbmit-bg-color-light">
           {/* Marquee */}
-          <section className="marquee-section_three">
-            <div className="container-fluid p-0">
-              <div className="swiper-slider marquee">
-                <div className="swiper-wrapper">
-                  <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                    <div className="pbmit-tag-wrapper">
-                      <h2
-                        className="pbmit-element-title"
-                        data-text="Ashtanga vinyasa yoga"
-                      >
-                        Ashtanga vinyasa yoga
-                      </h2>
-                    </div>
-                  </article>
-                  <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                    <div className="pbmit-tag-wrapper">
-                      <h2 className="pbmit-element-title" data-text="Iyengar Yoga">
-                        Iyengar Yoga
-                      </h2>
-                    </div>
-                  </article>
-                  <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                    <div className="pbmit-tag-wrapper">
-                      <h2 className="pbmit-element-title" data-text="Hot yoga">
-                        Hot yoga
-                      </h2>
-                    </div>
-                  </article>
-                  <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                    <div className="pbmit-tag-wrapper">
-                      <h2
-                        className="pbmit-element-title"
-                        data-text="Kundalini yoga"
-                      >
-                        Kundalini yoga
-                      </h2>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </section>
+         <Marquee/>
           {/* Marquee end */}
           {/* Tab Start */}
           <section >
@@ -1250,7 +990,7 @@ function Home() {
                           <div className="pbmit-featured-img-wrapper">
                             <div className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-01.jpg"
+                                src="images/homepage-3/service/1.jpg"
                                 alt=""
                               />
                             </div>
@@ -1260,7 +1000,7 @@ function Home() {
                           <div className="pbmit-featured-img-wrapper">
                             <div className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-02.jpg"
+                                src="images/homepage-3/service/3.jpg"
                                 alt=""
                               />
                             </div>
@@ -1270,7 +1010,7 @@ function Home() {
                           <div className="pbmit-featured-img-wrapper">
                             <div className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-03.jpg"
+                                src="images/homepage-3/service/2.jpg"
                                 alt=""
                               />
                             </div>
@@ -1280,7 +1020,7 @@ function Home() {
                           <div className="pbmit-featured-img-wrapper">
                             <div className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-04.jpg"
+                                src="images/homepage-3/service/4.jpg"
                                 alt=""
                               />
                             </div>
@@ -1302,20 +1042,20 @@ function Home() {
                           <span className="pbmit-text-content">
                             <span className="pbmit-serv-cat">
                               <a href="service-details.html" rel="tag">
-                                DJ Yoga Trainer
+                                Standing asana
                               </a>
                             </span>
                             <a
                               className="pbmit-title-inner"
                               href="service-details.html"
                             >
-                              <span>Ardha Chakrasana</span>
+                              <span>Virbhadr Asana</span>
                             </a>
                           </span>
                           <span className="pbmit-featured-img-wrapper">
                             <span className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-01.jpg"
+                                src="images/homepage-3/service/1.jpg"
                                 className="img-fluid"
                                 alt=""
                               />
@@ -1344,20 +1084,20 @@ function Home() {
                           <span className="pbmit-text-content">
                             <span className="pbmit-serv-cat">
                               <a href="service-details.html" rel="tag">
-                                Mantra yoga Trainer
+                                Standing Asana
                               </a>
                             </span>
                             <a
                               className="pbmit-title-inner"
                               href="service-details.html"
                             >
-                              <span>Baddha Konasana</span>
+                              <span>Virbhadr Asana 3</span>
                             </a>
                           </span>
                           <span className="pbmit-featured-img-wrapper">
                             <span className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-02.jpg"
+                                src="images/homepage-3/service/3.jpg"
                                 className="img-fluid"
                                 alt=""
                               />
@@ -1386,20 +1126,20 @@ function Home() {
                           <span className="pbmit-text-content">
                             <span className="pbmit-serv-cat">
                               <a href="service-details.html" rel="tag">
-                                DJ Yoga Trainer
+                                Sitting Asana
                               </a>
                             </span>
                             <a
                               className="pbmit-title-inner"
                               href="service-details.html"
                             >
-                              <span>Ashtanga Namaskara</span>
+                              <span> Padma Asana </span>
                             </a>
                           </span>
                           <span className="pbmit-featured-img-wrapper">
                             <span className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-03.jpg"
+                                src="images/homepage-3/service/2.jpg"
                                 className="img-fluid"
                                 alt=""
                               />
@@ -1428,20 +1168,20 @@ function Home() {
                           <span className="pbmit-text-content">
                             <span className="pbmit-serv-cat">
                               <a href="service-details.html" rel="tag">
-                                Astanga yoga Trainer
+                                Sitting Asana
                               </a>
                             </span>
                             <a
                               className="pbmit-title-inner"
                               href="service-details.html"
                             >
-                              <span>Urdhva Hastasana</span>
+                              <span>Mala Asana</span>
                             </a>
                           </span>
                           <span className="pbmit-featured-img-wrapper">
                             <span className="pbmit-featured-wrapper">
                               <img
-                                src="images/homepage-3/service/service-img-04.jpg"
+                                src="images/homepage-3/service/4.jpg"
                                 className="img-fluid"
                                 alt=""
                               />
@@ -2241,7 +1981,7 @@ function Home() {
                             </div>
                           </div>
                           <h3 className="pbmit-post-title">
-                            <a href="blog-details.html">
+                            <a>
                               Which Yoga Class Is Best for Beginners?
                             </a>
                           </h3>
@@ -2250,7 +1990,7 @@ function Home() {
                             combinations of physically…
                           </div>
                         </div>
-                        <a className="pbmit-blog-btn" href="blog-details.html">
+                        <a className="pbmit-blog-btn" onClick={reloadBlogPage}>
                           <span className="pbmit-button-icon-wrapper">
                             <span className="pbmit-button-icon">
                               <i className="pbmit-base-icon-black-arrow-1" />
@@ -2281,8 +2021,8 @@ function Home() {
                           <div className="pbmit-date-admin-wraper d-flex align-items-center">
                             <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
                               <div className="pbmit-meta-category">
-                                <a href="blog-classic.html" rel="category tag">
-                                  Meditation
+                                <a onClick={reloadBlogPage}>
+                                  Blog
                                 </a>
                               </div>
                             </div>
@@ -2397,7 +2137,7 @@ function Home() {
                             </div>
                           </div>
                           <h3 className="pbmit-post-title">
-                            <a href="blog-details.html">
+                            <a>
                               Yoga and Astrology: Find the Best Practices for Your
                               Sign
                             </a>
@@ -2529,7 +2269,7 @@ function Home() {
         </div>
         {/* page content End */}
         {/* footer */}
-        <Footer/>
+        <Footer />
         {/* footer End */}
       </div>
       {/* page wrapper End */}
