@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
+import Marquee from '../Marquee/Marquee'
 
 function About() {
     return (
@@ -207,42 +208,7 @@ function About() {
                     </section>
                     {/* About Us End */}
                     {/* Marquee Start */}
-                     <section className="section-lgb">
-                        <div className="container-fluid p-0">
-                            <div className="swiper-slider marquee">
-                                <div className="swiper-wrapper">
-                                    <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                                        <div className="pbmit-tag-wrapper">
-                                            <h2 className="pbmit-element-title" data-text="Spa area">
-                                                Spa area
-                                            </h2>
-                                        </div>
-                                    </article>
-                                    <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                                        <div className="pbmit-tag-wrapper">
-                                            <h2 className="pbmit-element-title" data-text="Changing rooms">
-                                                Changing rooms
-                                            </h2>
-                                        </div>
-                                    </article>
-                                    <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                                        <div className="pbmit-tag-wrapper">
-                                            <h2 className="pbmit-element-title" data-text="Lounge cafe">
-                                                Lounge cafe
-                                            </h2>
-                                        </div>
-                                    </article>
-                                    <article className="pbmit-marquee-effect-style-1 swiper-slide">
-                                        <div className="pbmit-tag-wrapper">
-                                            <h2 className="pbmit-element-title" data-text="Bright halls">
-                                                Bright halls
-                                            </h2>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <Marquee/>
                     {/* Marquee End */}
                     {/* Static Box */}
                     <section className="static-box-section_two pbmit-element-static-box-style-1">

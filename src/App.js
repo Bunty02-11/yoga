@@ -5,7 +5,6 @@ import About from './Component/About/About'
 import Contatc from './Contact/Contatc'
 import Blog from './Component/Blogs/Blog'
 import Services from './Component/Service/Services'
-
 function App() {
   return (
     <div>
