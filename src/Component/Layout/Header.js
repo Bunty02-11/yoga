@@ -1,34 +1,17 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [activePage, setActivePage] = useState(location.pathname);
 
-  const reloadHomePage = () => {
-    navigate("/");
+  const reloadPage = (page) => {
+    navigate(page);
     window.scrollTo(0, 0);
     window.location.reload();
-  }
-  const reloadAboutPage = () => {
-    navigate("/about");
-    window.scrollTo(0, 0);
-    window.location.reload();
-  }
-  const reloadServicesPage = () => {
-    navigate("/service");
-    window.scrollTo(0, 0);
-    window.location.reload();
-  }
-  const reloadBlogPage = () => {
-    navigate("/blog");
-    window.scrollTo(0, 0);
-    window.location.reload();
-  }
-  const reloadContactPage = () => {
-    navigate("/contact");
-    window.scrollTo(0, 0);
-    window.location.reload();
-  }
+    setActivePage(page);
+  };
 
   return (
     <div>
@@ -84,23 +67,25 @@ function Header() {
                             />
                           </svg>
                         </span>
-                        <ul className="navigation clearfix">
-                          <li className="dropdown active">
-                            <a onClick={reloadHomePage}>Home</a>
-                          </li>
-                          <li className="dropdown">
-                            <a onClick={reloadAboutPage}>About</a>
-                          </li>
-                          <li className="dropdown">
-                            <a  onClick={reloadServicesPage}>Services</a>
-                          </li>
-                          <li className="dropdown">
-                            <a onClick={reloadBlogPage}>Blog</a>
-                          </li>
-                          <li>
-                            <a onClick={reloadContactPage}>Contact Us</a>
-                          </li>
-                        </ul>
+                        <div className="pbmit-menu-wrap">
+                          <ul className="navigation clearfix">
+                            <li className={`dropdown ${activePage === '/' ? 'active' : ''}`}>
+                              <a onClick={() => reloadPage("/")}>Home</a>
+                            </li>
+                            <li className={`dropdown ${activePage === '/about' ? 'active' : ''}`}>
+                              <a onClick={() => reloadPage("/about")}>About</a>
+                            </li>
+                            <li className={`dropdown ${activePage === '/service' ? 'active' : ''}`}>
+                              <a onClick={() => reloadPage("/service")}>Services</a>
+                            </li>
+                            <li className={`dropdown ${activePage === '/blog' ? 'active' : ''}`}>
+                              <a onClick={() => reloadPage("/blog")}>Blog</a>
+                            </li>
+                            <li className={` ${activePage === '/contact' ? 'active' : ''}`}>
+                              <a onClick={() => reloadPage("/contact")}>Contact Us</a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </nav>
@@ -111,46 +96,6 @@ function Header() {
                       <i className="pbmit-base-icon-search-1" />
                     </a>
                   </div>
-                  {/* <div className="pbmit-button-box-second">
-                      <a className="pbmit-btn" href="contact-us.html">
-                        <span className="pbmit-btn-content-wrapper">
-                          <span className="pbmit-button-icon">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="22.76"
-                              height="22.76"
-                              viewBox="0 0 22.76 22.76"
-                            >
-                              <title>black-arrow</title>
-                              <path
-                                d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1"
-                                transform="translate(-0.29 -0.29)"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth={2}
-                              />
-                              <path
-                                d="M22.34,1a14.67,14.67,0,0,0,0,20.75"
-                                transform="translate(-0.29 -0.29)"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth={2}
-                              />
-                              <path
-                                d="M22.34,1,1,22.34"
-                                transform="translate(-0.29 -0.29)"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth={2}
-                              />
-                            </svg>
-                          </span>
-                           <span className="pbmit-button-text">
-                            Make An Appointment
-                          </span> 
-                        </span>
-                      </a>
-                    </div> */}
                 </div>
               </div>
             </div>

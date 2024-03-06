@@ -5,6 +5,7 @@ import About from './Component/About/About'
 import Contatc from './Contact/Contatc'
 import Blog from './Component/Blogs/Blog'
 import Services from './Component/Service/Services'
+import Motivation from './Component/Blogs/Blogpage/Motivation'
 function App() {
   return (
     <div>
@@ -14,6 +15,8 @@ function App() {
           <Route exact path='/about' element={<About/>} />
           <Route exact path='/service' element={<Services/>} />
           <Route exact path='/blog' element={<Blog />} />
+          <Route exact path='/blogdetails' element={<Motivation />} />
+
           <Route exact path='/contact' element={<Contatc />} />
         </Routes>
       </HashRouter>

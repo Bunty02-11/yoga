@@ -1,8 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
 
 function Blog() {
+    const navigate = useNavigate();
+
+    const reloadBlogdetailPage = () => {
+        navigate("/blogdetails");
+        window.scrollTo(0,0);
+        window.location.reload();
+      }
     return (
         <div>
             <>
@@ -37,7 +45,7 @@ function Blog() {
                     {/*Page Content */}
                     <div className="page-content">
                         {/* Blog Classic */}
-                        <section className="site_content blog_classic">
+                        <section className="site_content blog_classic" >
                             <div className="container">
                                 <div className="row">
                                     <div className="col-md-12 col-lg-9 blog-right-col">
@@ -45,7 +53,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a  onClick={reloadBlogdetailPage} >
                                                             <img
                                                                 src="images/blog/blog-01b.jpg"
                                                                 className="img-fluid"
@@ -57,13 +65,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 Motivation
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a  onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -83,7 +91,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -107,7 +115,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -151,7 +159,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-02b.jpg"
                                                                 className="img-fluid"
@@ -163,13 +171,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 Meditation
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -189,7 +197,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -213,7 +221,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -257,7 +265,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-03b.jpg"
                                                                 className="img-fluid"
@@ -269,13 +277,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 fitness
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -295,7 +303,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -319,7 +327,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -363,7 +371,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-04b.jpg"
                                                                 className="img-fluid"
@@ -375,13 +383,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 Inspiration
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -401,7 +409,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -426,7 +434,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -470,7 +478,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-05b.jpg"
                                                                 className="img-fluid"
@@ -482,13 +490,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 Motivation
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -508,7 +516,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -532,7 +540,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -576,7 +584,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-06b.jpg"
                                                                 className="img-fluid"
@@ -588,13 +596,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 Meditation
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -614,7 +622,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -638,7 +646,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -682,7 +690,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-07b.jpg"
                                                                 className="img-fluid"
@@ -694,13 +702,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 Meditation
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -720,7 +728,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -744,7 +752,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -788,7 +796,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-08b.jpg"
                                                                 className="img-fluid"
@@ -800,13 +808,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 fitness
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -826,7 +834,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -850,7 +858,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -894,7 +902,7 @@ function Blog() {
                                             <article className="post blog-classic">
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a href="blog-details.html">
+                                                        <a onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/blog/blog-09b.jpg"
                                                                 className="img-fluid"
@@ -906,13 +914,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a href="blog-classic.html" rel="category tag">
+                                                            <a  onClick={reloadBlogdetailPage} rel="category tag">
                                                                 fitness
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a href="blog-details.html" rel="bookmark">
+                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
                                                                 <time
                                                                     className="entry-date published"
                                                                     dateTime="2023-08-29T09:05:54+00:00"
@@ -932,7 +940,7 @@ function Blog() {
                                                             by
                                                             <a
                                                                 className="pbmit-author-link"
-                                                                href="blog-details.html"
+                                                                onClick={reloadBlogdetailPage}
                                                             >
                                                                 admin
                                                             </a>
@@ -956,7 +964,7 @@ function Blog() {
                                                             </p>
                                                         </div>
                                                         <a
-                                                            href="blog-details.html"
+                                                            onClick={reloadBlogdetailPage}
                                                             className="pbmit-btn pbmit-btn-global"
                                                         >
                                                             <span className="pbmit-btn-content-wrapper">
@@ -1018,25 +1026,25 @@ function Blog() {
                                                 <ul>
                                                     <li>
                                                         <span className="pbmit-cat-li">
-                                                            <a href="blog-classic.html">fitness</a>
+                                                            <a  onClick={reloadBlogdetailPage}>fitness</a>
                                                             <span className="pbmit-brackets">( 3 )</span>
                                                         </span>
                                                     </li>
                                                     <li>
                                                         <span className="pbmit-cat-li">
-                                                            <a href="blog-classic.html">Inspiration</a>
+                                                            <a  onClick={reloadBlogdetailPage}>Inspiration</a>
                                                             <span className="pbmit-brackets">( 1 )</span>
                                                         </span>
                                                     </li>
                                                     <li>
                                                         <span className="pbmit-cat-li">
-                                                            <a href="blog-classic.html">Meditation</a>
+                                                            <a  onClick={reloadBlogdetailPage}>Meditation</a>
                                                             <span className="pbmit-brackets">( 3 )</span>
                                                         </span>
                                                     </li>
                                                     <li>
                                                         <span className="pbmit-cat-li">
-                                                            <a href="blog-classic.html">Motivation</a>
+                                                            <a  onClick={reloadBlogdetailPage}>Motivation</a>
                                                             <span className="pbmit-brackets">( 2 )</span>
                                                         </span>
                                                     </li>
@@ -1046,7 +1054,7 @@ function Blog() {
                                                 <h2 className="widget-title">Recent Post </h2>
                                                 <ul className="recent-post-list">
                                                     <li className="recent-post-list-li">
-                                                        <a className="recent-post-thum" href="blog-details.html">
+                                                        <a className="recent-post-thum" onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/recent-post/blog-01.jpg"
                                                                 className="img-fluid"
@@ -1055,17 +1063,17 @@ function Blog() {
                                                         </a>
                                                         <div className="pbmit-rpw-content">
                                                             <span className="pbmit-rpw-date">
-                                                                <a href="blog-details.html">August 29, 2023</a>
+                                                                <a onClick={reloadBlogdetailPage}>August 29, 2023</a>
                                                             </span>
                                                             <span className="pbmit-rpw-title">
-                                                                <a href="blog-details.html">
+                                                                <a onClick={reloadBlogdetailPage}>
                                                                     Which Yoga Class Is Best for Beginners?
                                                                 </a>
                                                             </span>
                                                         </div>
                                                     </li>
                                                     <li className="recent-post-list-li">
-                                                        <a className="recent-post-thum" href="blog-details.html">
+                                                        <a className="recent-post-thum" onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/recent-post/blog-02.jpg"
                                                                 className="img-fluid"
@@ -1074,17 +1082,17 @@ function Blog() {
                                                         </a>
                                                         <div className="pbmit-rpw-content">
                                                             <span className="pbmit-rpw-date">
-                                                                <a href="blog-details.html">August 29, 2023</a>
+                                                                <a onClick={reloadBlogdetailPage}>August 29, 2023</a>
                                                             </span>
                                                             <span className="pbmit-rpw-title">
-                                                                <a href="blog-details.html">
+                                                                <a onClick={reloadBlogdetailPage}>
                                                                     Spiritual Cleansing: 14 Rituals to Detox Your Soul
                                                                 </a>
                                                             </span>
                                                         </div>
                                                     </li>
                                                     <li className="recent-post-list-li">
-                                                        <a className="recent-post-thum" href="blog-details.html">
+                                                        <a className="recent-post-thum" onClick={reloadBlogdetailPage}>
                                                             <img
                                                                 src="images/recent-post/blog-03.jpg"
                                                                 className="img-fluid"
@@ -1093,10 +1101,10 @@ function Blog() {
                                                         </a>
                                                         <div className="pbmit-rpw-content">
                                                             <span className="pbmit-rpw-date">
-                                                                <a href="blog-details.html">August 29, 2023</a>
+                                                                <a onClick={reloadBlogdetailPage}>August 29, 2023</a>
                                                             </span>
                                                             <span className="pbmit-rpw-title">
-                                                                <a href="blog-details.html">
+                                                                <a onClick={reloadBlogdetailPage}>
                                                                     Spiritual Awakening: Definition, Signs and Symptoms
                                                                 </a>
                                                             </span>
@@ -1161,13 +1169,13 @@ function Blog() {
                                             <aside className="widget widget-tag-cloud">
                                                 <h3 className="widget-title">Tag Cloud</h3>
                                                 <div className="tagcloud">
-                                                    <a href="blog-classic.html" className="tag-cloud-link">
+                                                    <a  onClick={reloadBlogdetailPage} className="tag-cloud-link">
                                                         fitness
                                                     </a>
-                                                    <a href="blog-classic.html" className="tag-cloud-link">
+                                                    <a  onClick={reloadBlogdetailPage} className="tag-cloud-link">
                                                         meditation
                                                     </a>
-                                                    <a href="blog-classic.html" className="tag-cloud-link">
+                                                    <a  onClick={reloadBlogdetailPage} className="tag-cloud-link">
                                                         peace
                                                     </a>
                                                 </div>
