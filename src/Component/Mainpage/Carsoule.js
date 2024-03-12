@@ -31,7 +31,7 @@ function Carsoule() {
           console.log(error);
         })
     }, []);
-    console.log(slides);
+    // console.log(slides);
     // const slides = [
     //     {
     //       image: "https://easytender.s3.ap-south-1.amazonaws.com/1709733605566",
