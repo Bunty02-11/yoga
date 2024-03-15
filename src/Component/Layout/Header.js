@@ -31,7 +31,8 @@ function Header() {
                     <a href="index.html">
                       <img
                         className="logo-img"
-                        src="images/logo-white.svg"
+                        style={{height: '150px'}}
+                        src="images/TRIKA YOGA.png"
                         alt="Yoge"
                       />
                     </a>

@@ -111,6 +111,9 @@ function Motivation() {
                                             <div className="col-md-12 col-xl-6 pbmit-tab-list">
                                                 <h2>{item.Attribbute}</h2>
                                                 <div>{item.content}</div>
+                                                <div>{item.bullet}</div>
+                                                
+
                                                 <ul className="list-group list-group-borderless">
                                                     {/* {item.bullet((bullet, idx) => ( */}
                                                         <li className="list-group-item" >

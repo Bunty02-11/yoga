@@ -229,7 +229,7 @@ form .pbmit-footer-newsletter button:hover .pbmit-button-icon{
 	padding: 45px 55px 70px 55px;
 }
 .about-us-two_img{
-	background-image: url(../images/homepage-2/about-img-01.jpg);
+	background-image: url(../images/homepage-2/about-img-01.jpeg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1656,6 +1656,7 @@ form .pbmit-footer-newsletter button:hover .pbmit-button-icon{
 }
 .pbmit-service-ads .pbmit-logo-img img {
     width: 235px;
+    height: 150px;
     mix-blend-mode: luminosity;
 }
 .pbmit-service-ads .pbmit-ads-title {

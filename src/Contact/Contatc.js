@@ -1,8 +1,49 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Header from '../Component/Layout/Header'
 import Footer from '../Component/Layout/Footer'
+import axios from 'axios'
 
 function Contatc() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      const response = await axios.post('http://localhost:8000/api/addcontact', formData);
+      setSuccessMessage('Message sent successfully!');
+      setErrorMessage('');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      setErrorMessage('Failed to send message. Please try again later.');
+      setSuccessMessage('');
+    }
+    setIsLoading(false);
+  };
+
   return (
     <div>
       <>
@@ -143,111 +184,32 @@ function Contatc() {
             <div className="col-md-8 contact-us-left_col">
               <div className="contact-form_main">
                 <h3 className="pbmit-title mb-3">Send a message</h3>
-                <form
-                  className="contact-form"
-                  method="post"
-                  id="contact-form"
-                  action="https://yoge-demo.pbminfotech.com/html-demo/send.php"
-                >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Your Name *"
-                        name="name"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <input
-                        type="email"
-                        className="form-control"
-                        placeholder="Your Email *"
-                        name="email"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <input
-                        type="tel"
-                        className="form-control"
-                        placeholder="Your Phone *"
-                        name="phone"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Subject"
-                        name="subject"
-                        required=""
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <textarea
-                        name="message"
-                        cols={40}
-                        rows={10}
-                        className="form-control"
-                        placeholder="Message"
-                        required=""
-                        defaultValue={""}
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-check">
-                        <input className="form-check-input" type="checkbox" />
-                        <label className="form-check-label">
-                          Save my name, email, and website in this browser for
-                          the next time I comment.
-                        </label>
+                {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
+                  {successMessage && <div className="alert alert-success">{successMessage}</div>}
+                <form className="contact-form" onSubmit={handleSubmit}>
+                    <div className="row">
+                      <div className="col-md-6">
+                        <input type="text" className="form-control" placeholder="Your Name *" name="name" value={formData.name} onChange={handleChange} required />
+                      </div>
+                      <div className="col-md-6">
+                        <input type="email" className="form-control" placeholder="Your Email *" name="email" value={formData.email} onChange={handleChange} required />
+                      </div>
+                      <div className="col-md-6">
+                        <input type="tel" className="form-control" placeholder="Your Phone *" name="phone" value={formData.phone} onChange={handleChange} required />
+                      </div>
+                      <div className="col-md-6">
+                        <input type="text" className="form-control" placeholder="Subject" name="subject" value={formData.subject} onChange={handleChange} required />
+                      </div>
+                      <div className="col-md-12">
+                        <textarea name="message" cols={40} rows={10} className="form-control" placeholder="Message" value={formData.message} onChange={handleChange} required />
+                      </div>
+                      <div className="col-md-12">
+                        <button className="pbmit-btn pbmit-btn-global" type="submit" disabled={isLoading}>
+                          {isLoading ? 'Sending...' : 'Submit Now'}
+                        </button>
                       </div>
                     </div>
-                    <div className="col-md-12">
-                      <button className="pbmit-btn pbmit-btn-global">
-                        <i className="form-btn-loader fa fa-circle-o-notch fa-spin fa-fw margin-bottom d-none" />
-                        <span className="pbmit-btn-content-wrapper">
-                          <span className="pbmit-button-icon">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="22.76"
-                              height="22.76"
-                              viewBox="0 0 22.76 22.76"
-                            >
-                              <title>black-arrow</title>
-                              <path
-                                d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1"
-                                transform="translate(-0.29 -0.29)"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth={2}
-                              />
-                              <path
-                                d="M22.34,1a14.67,14.67,0,0,0,0,20.75"
-                                transform="translate(-0.29 -0.29)"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth={2}
-                              />
-                              <path
-                                d="M22.34,1,1,22.34"
-                                transform="translate(-0.29 -0.29)"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth={2}
-                              />
-                            </svg>
-                          </span>
-                          <span className="pbmit-button-text">Submit Now</span>
-                        </span>
-                      </button>
-                    </div>
-                    <div className="col-md-12 col-lg-12 message-status" />
-                  </div>
-                </form>
+                  </form>
               </div>
             </div>
             <div className="col-md-4 contact-us-right_col">
