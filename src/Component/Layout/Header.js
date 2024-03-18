@@ -32,7 +32,7 @@ function Header() {
                       <img
                         className="logo-img"
                         style={{height: '150px'}}
-                        src="images/TRIKA YOGA.png"
+                        src="https://res.cloudinary.com/dsj9t6adh/image/upload/v1710774374/vl3i0j37vfk1xqq0lqis.png  "
                         alt="Yoge"
                       />
                     </a>

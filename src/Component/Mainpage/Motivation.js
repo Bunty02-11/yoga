@@ -109,7 +109,8 @@ function Motivation() {
                                                 <img src={item.Image} className="img-fluid" alt="" />
                                             </div>
                                             <div className="col-md-12 col-xl-6 pbmit-tab-list">
-                                                <h2>{item.Attribbute}</h2>
+                                                <h2>{item.Heading}</h2>
+                                                
                                                 <div>{item.content}</div>
                                                 
 

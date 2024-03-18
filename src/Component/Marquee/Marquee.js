@@ -3,7 +3,7 @@ import Marquee from 'react-marquee-slider';
 import times from 'lodash/times';
 
 function MarqueeComponent() {
-  const titles = ['Ashtanga vinyasa yoga', 'Iyengar Yoga', 'Hot yoga', 'Kundalini yoga'];
+  const titles = ['Sound Healing', 'Hatha Yoga & Meditation', 'Kids Yoga', 'Garbhasanskar Pre & Post Natal Yoga' ];
   const lotusImage = 'https://res.cloudinary.com/dsj9t6adh/image/upload/v1709646782/ml9gnvf4lezcnfq4r0rf.png';
 
   return (
