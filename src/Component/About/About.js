@@ -4,6 +4,7 @@ import Footer from '../Layout/Footer'
 import Marquee from '../Marquee/Marquee'
 import Aboutus from './Aboutus'
 import Testimonial from './Testimonial'
+import Banner from './Banner'
 
 function About() {
     return (
@@ -13,37 +14,7 @@ function About() {
                 <Header/>
                 {/* Header Main Area End Here */}
                 {/* Title Bar */}
-                <div className="pbmit-title-bar-wrapper">
-                    <div className="container">
-                        <div className="pbmit-title-bar-content">
-                            <div className="pbmit-title-bar-content-inner">
-                                <div className="pbmit-tbar">
-                                    <div className="pbmit-tbar-inner container">
-                                        <h1 className="pbmit-tbar-title"> About Us</h1>
-                                    </div>
-                                </div>
-                                <div className="pbmit-breadcrumb">
-                                    <div className="pbmit-breadcrumb-inner">
-                                        <span>
-                                            <a title="" href="#" className="home">
-                                                <span>Yoge</span>
-                                            </a>
-                                        </span>
-                                        <span className="sep">
-                                            <i className="pbmit-base-icon-angle-double-right" />
-                                        </span>
-                                        <span>
-                                            <span className="post-root post post-post current-item">
-                                                {" "}
-                                                About Us
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <Banner/>
                 {/* Title Bar End*/}
                 {/* Page Content */}
                 <div className="page-content">
@@ -62,7 +33,7 @@ function About() {
                                         className="pbmit-bg-imgbox"
                                         style={{
                                             backgroundImage:
-                                                "url(images/homepage-2/static-box/static-box-img01.jpg)"
+                                                "url(https://images.squarespace-cdn.com/content/v1/5bbe5f86809d8e661488fd30/a2692a9c-2e0a-4ad8-936b-17c31c9f5857/314805011b2715df3cc2569ad963c15d.gif)"
                                         }}
                                     >
                                         <div className="pbmit-img-text">
@@ -76,7 +47,7 @@ function About() {
                                     </div>
                                     <div className="pbmit-img">
                                         <img
-                                            src="images/homepage-2/static-box/static-box-img01.jpg"
+                                            src="https://images.squarespace-cdn.com/content/v1/5bbe5f86809d8e661488fd30/a2692a9c-2e0a-4ad8-936b-17c31c9f5857/314805011b2715df3cc2569ad963c15d.gif"
                                             alt="Protection From Injury"
                                         />
                                     </div>
@@ -90,16 +61,6 @@ function About() {
                                                 There are many variations of passages of Lorem Ipsum
                                                 available, but the majority have suffered alteration.
                                             </div>
-                                            <div className="pbmit-button">
-                                                <a href="our-history.html">
-                                                    <span className="pbmit-button-text">Read More</span>
-                                                    <span className="pbmit-button-icon-wrapper">
-                                                        <span className="pbmit-button-icon">
-                                                            <i className="pbmit-base-icon-black-arrow-1" />
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
                                 </article>
@@ -108,7 +69,7 @@ function About() {
                                         className="pbmit-bg-imgbox"
                                         style={{
                                             backgroundImage:
-                                                "url(images/homepage-2/static-box/static-box-img02.jpg)"
+                                                "url(https://institute.careerguide.com/wp-content/uploads/2020/10/Yoga-animation.gif)"
                                         }}
                                     >
                                         <div className="pbmit-img-text">
@@ -122,7 +83,7 @@ function About() {
                                     </div>
                                     <div className="pbmit-img">
                                         <img
-                                            src="images/homepage-2/static-box/static-box-img02.jpg"
+                                            src="https://institute.careerguide.com/wp-content/uploads/2020/10/Yoga-animation.gif"
                                             alt="Weight Reduction"
                                         />
                                     </div>
@@ -136,16 +97,6 @@ function About() {
                                                 There are many variations of passages of Lorem Ipsum
                                                 available, but the majority have suffered alteration.
                                             </div>
-                                            <div className="pbmit-button">
-                                                <a href="our-history.html">
-                                                    <span className="pbmit-button-text">Read More</span>
-                                                    <span className="pbmit-button-icon-wrapper">
-                                                        <span className="pbmit-button-icon">
-                                                            <i className="pbmit-base-icon-black-arrow-1" />
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
                                 </article>
@@ -154,7 +105,7 @@ function About() {
                                         className="pbmit-bg-imgbox"
                                         style={{
                                             backgroundImage:
-                                                "url(images/homepage-2/static-box/static-box-img03.jpg)"
+                                                "url(https://cdn.dribbble.com/users/218857/screenshots/4419918/yoga.gif)"
                                         }}
                                     >
                                         <div className="pbmit-img-text">
@@ -168,7 +119,7 @@ function About() {
                                     </div>
                                     <div className="pbmit-img">
                                         <img
-                                            src="images/homepage-2/static-box/static-box-img03.jpg"
+                                            src="https://cdn.dribbble.com/users/218857/screenshots/4419918/yoga.gif"
                                             alt="Increased Flexibility"
                                         />
                                     </div>
@@ -181,16 +132,6 @@ function About() {
                                             <div className="pbminfotech-static-box-desc">
                                                 There are many variations of passages of Lorem Ipsum
                                                 available, but the majority have suffered alteration.
-                                            </div>
-                                            <div className="pbmit-button">
-                                                <a href="our-history.html">
-                                                    <span className="pbmit-button-text">Read More</span>
-                                                    <span className="pbmit-button-icon-wrapper">
-                                                        <span className="pbmit-button-icon">
-                                                            <i className="pbmit-base-icon-black-arrow-1" />
-                                                        </span>
-                                                    </span>
-                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -207,162 +148,6 @@ function About() {
                     {/* Team Start */}
                     {/* Team End */}
                     {/* Client Start */}
-                    <section>
-                        <div className="container">
-                            <div
-                                className="swiper-slider"
-                                data-arrows-class="service-two_arrow"
-                                data-autoplay="true"
-                                data-loop="true"
-                                data-dots="false"
-                                data-arrows="false"
-                                data-columns={6}
-                                data-margin={30}
-                                data-effect="slide"
-                            >
-                                <div className="swiper-wrapper">
-                                    {/* Slide1 */}
-                                    <article className="pbmit-client-style-1 swiper-slide">
-                                        <div className="pbmit-border-wrapper">
-                                            <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
-                                                <h4 className="pbmit-hide">Client-06</h4>
-                                                <div className="pbmit-client-hover-img">
-                                                    <img
-                                                        src="images/homepage-2/client/green-client-logo-01.png"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src="images/homepage-2/client/dark-client-logo-01.png"
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    {/* Slide2 */}
-                                    <article className="pbmit-client-style-1 swiper-slide">
-                                        <div className="pbmit-border-wrapper">
-                                            <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
-                                                <h4 className="pbmit-hide">Client-06</h4>
-                                                <div className="pbmit-client-hover-img">
-                                                    <img
-                                                        src="images/homepage-2/client/green-client-logo-02.png"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src="images/homepage-2/client/dark-client-logo-02.png"
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    {/* Slide3 */}
-                                    <article className="pbmit-client-style-1 swiper-slide">
-                                        <div className="pbmit-border-wrapper">
-                                            <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
-                                                <h4 className="pbmit-hide">Client-06</h4>
-                                                <div className="pbmit-client-hover-img">
-                                                    <img
-                                                        src="images/homepage-2/client/green-client-logo-03.png"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src="images/homepage-2/client/dark-client-logo-03.png"
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    {/* Slide4 */}
-                                    <article className="pbmit-client-style-1 swiper-slide">
-                                        <div className="pbmit-border-wrapper">
-                                            <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
-                                                <h4 className="pbmit-hide">Client-06</h4>
-                                                <div className="pbmit-client-hover-img">
-                                                    <img
-                                                        src="images/homepage-2/client/green-client-logo-04.png"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src="images/homepage-2/client/dark-client-logo-04.png"
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    {/* Slide5 */}
-                                    <article className="pbmit-client-style-1 swiper-slide">
-                                        <div className="pbmit-border-wrapper">
-                                            <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
-                                                <h4 className="pbmit-hide">Client-06</h4>
-                                                <div className="pbmit-client-hover-img">
-                                                    <img
-                                                        src="images/homepage-2/client/green-client-logo-05.png"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src="images/homepage-2/client/dark-client-logo-05.png"
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    {/* Slide6 */}
-                                    <article className="pbmit-client-style-1 swiper-slide">
-                                        <div className="pbmit-border-wrapper">
-                                            <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
-                                                <h4 className="pbmit-hide">Client-06</h4>
-                                                <div className="pbmit-client-hover-img">
-                                                    <img
-                                                        src="images/homepage-2/client/green-client-logo-06.png"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src="images/homepage-2/client/dark-client-logo-06.png"
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                     {/* Client End */}
                     {/* Testimonial Start */}
                    <Testimonial/>

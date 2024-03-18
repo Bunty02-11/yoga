@@ -67,11 +67,6 @@ function Header() {
                 </nav>
               </div>
               <div className="pbmit-right-box d-flex align-items-center">
-                <div className="pbmit-header-search-btn">
-                  <a href="#" title="Search">
-                    <i className="pbmit-base-icon-search-1" />
-                  </a>
-                </div>
               </div>
             </div>
           </div>

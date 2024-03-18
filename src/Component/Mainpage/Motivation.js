@@ -111,7 +111,6 @@ function Motivation() {
                                             <div className="col-md-12 col-xl-6 pbmit-tab-list">
                                                 <h2>{item.Attribbute}</h2>
                                                 <div>{item.content}</div>
-                                                <div>{item.bullet}</div>
                                                 
 
                                                 <ul className="list-group list-group-borderless">
@@ -124,7 +123,29 @@ function Motivation() {
                                                                 />
                                                             </span>
                                                             <span className="pbmit-icon-list-text">
-                                                                {item.content}
+                                                                {item.bullet_one}
+                                                            </span>
+                                                        </li>
+                                                        <li className="list-group-item" >
+                                                            <span className="pbmit-icon-list-icon">
+                                                                <i
+                                                                    aria-hidden="true"
+                                                                    className="pbmit-base-icon-check"
+                                                                />
+                                                            </span>
+                                                            <span className="pbmit-icon-list-text">
+                                                                {item.bullet_two}
+                                                            </span>
+                                                        </li>
+                                                        <li className="list-group-item" >
+                                                            <span className="pbmit-icon-list-icon">
+                                                                <i
+                                                                    aria-hidden="true"
+                                                                    className="pbmit-base-icon-check"
+                                                                />
+                                                            </span>
+                                                            <span className="pbmit-icon-list-text">
+                                                                {item.bullet_three}
                                                             </span>
                                                         </li>
                                                     {/* ))} */}

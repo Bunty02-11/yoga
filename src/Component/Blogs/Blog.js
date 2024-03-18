@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
 import axios from 'axios';
+import Banner from '../About/Banner';
 
 function Blog() {
     const [slides, setSlides] = useState([]);
@@ -30,28 +31,7 @@ function Blog() {
         <div>
             <div className="page-wrapper">
                 <Header />
-                <div className="pbmit-title-bar-wrapper">
-                    <div className="container">
-                        <div className="pbmit-title-bar-content">
-                            <div className="pbmit-title-bar-content-inner">
-                                <div className="pbmit-tbar">
-                                    <div className="pbmit-tbar-inner container">
-                                        <h1 className="pbmit-tbar-title"> Blog</h1>
-                                    </div>
-                                </div>
-                                <div className="pbmit-breadcrumb">
-                                    <div className="pbmit-breadcrumb-inner">
-                                        <span>
-                                            <a title="" href="#" className="home">
-                                                <span>Yoge</span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Banner/>
                 <div className="page-content">
                     <section className="site_content blog_classic">
                         <div className="container">

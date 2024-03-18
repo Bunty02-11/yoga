@@ -95,7 +95,7 @@ function Footer() {
                     <aside className="widget widget_text">
                       <div className="textwidget">
                         <div className="pbmit-footer-logo">
-                          <img src="images/logo.svg" alt="" />
+                          <img src="images/TRIKA YOGA.png" alt="" />
                         </div>
                         <div className="pbmit-footer-text">
                           Mauris sed molestie sem. Sed vel vestibulum elit, non
