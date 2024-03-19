@@ -64,7 +64,7 @@ function Yogasection() {
                     <ul>
                       {services.map(service => (
                         <li key={service._id} onClick={() => handleServiceClick(service)}>
-                          <a href="#">{service.service_name}</a>
+                          <a>{service.service_name}</a>
                         </li>
                       ))}
                     </ul>

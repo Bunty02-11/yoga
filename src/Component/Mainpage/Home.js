@@ -9,7 +9,7 @@ import Service from './Service';
 
 function Home() {
 
- 
+
 
 
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ function Home() {
           <Marquee />
           {/* Marquee end */}
           {/* Tab Start */}
-         <Motivation/>
+          <Motivation />
           {/* Tab end */}
           {/* Ihbox Start */}
           <section className="ihbox-section_three">
@@ -48,12 +48,12 @@ function Home() {
                             </div>
                           </div>
                         </div>
-                        <h2 className="pbmit-element-title">5+ years experience</h2>
+                        <h2 className="pbmit-element-title">13+ years experience</h2>
                       </div>
                       <div className="pbmit-content-wrapper">
                         <div className="pbmit-heading-desc">
-                          Nullam porta enim vel tellus commodo, eget laoreet odio
-                          ultrices.
+                          My 13-year yoga journey has been a profound voyage of self-discovery, from healing to teaching,
+                          marked by growth, evolution, and unwavering commitment.
                         </div>
                       </div>
                     </div>
@@ -75,8 +75,7 @@ function Home() {
                       </div>
                       <div className="pbmit-content-wrapper">
                         <div className="pbmit-heading-desc">
-                          Nullam porta enim vel tellus commodo, eget laoreet odio
-                          ultrices.
+                          Empowering you through personalized solutions, we tailor our services to suit your unique needs, ensuring every interaction is meaningful and impactful.
                         </div>
                       </div>
                     </div>
@@ -94,12 +93,13 @@ function Home() {
                             </div>
                           </div>
                         </div>
-                        <h2 className="pbmit-element-title">World class gurus</h2>
+                        <h2 className="pbmit-element-title">Balancing Body, Mind, and Spirit.</h2>
                       </div>
                       <div className="pbmit-content-wrapper">
                         <div className="pbmit-heading-desc">
-                          Nullam porta enim vel tellus commodo, eget laoreet odio
-                          ultrices.
+                        With over 2,685 hours of teaching experience, we bring a wealth of
+                         expertise and dedication to every yoga session, 
+                        guiding you towards profound transformations and holistic well-being.
                         </div>
                       </div>
                     </div>
@@ -111,7 +111,7 @@ function Home() {
           </section>
           {/* Ihbox End */}
           {/* Service Start */}
-         <Service/>
+          <Service />
           {/* Service End */}
           {/* Counter Start */}
           {/* <section className="counter_three">

@@ -30,7 +30,7 @@ function Motivation() {
                 <div className="container">
                     <div className="position-relative">
                         <div className="pbmit-heading-subheading animation-style2">
-                            <h4 className="pbmit-subtitle">motivation</h4>
+                            <h4 className="pbmit-subtitle">Trika Yoga</h4>
                             <h2 className="pbmit-title">Let's change your life</h2>
                         </div>
                         <div className="tab_btn">

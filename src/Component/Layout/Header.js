@@ -9,6 +9,7 @@ function Header() {
 
   const reloadPage = (page) => {
     navigate(page);
+    window.location.reload();
     window.scrollTo(0, 0);
     setActivePage(page);
     // Close mobile menu after navigation on mobile devices
@@ -47,19 +48,19 @@ function Header() {
                   <div className={`pbmit-mobile-menu-bg ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu} />
                   <div className={`collapse navbar-collapse clearfix ${isMobileMenuOpen ? 'show' : ''}`} id="pbmit-menu">
                     <ul className="navigation clearfix">
-                      <li className={`dropdown ${activePage === '/' ? 'active' : ''}`}>
+                      <li className={`dropdown ${activePage === '/' ? 'active' : ''}`} style={{cursor:"pointer"}}>
                         <a onClick={() => reloadPage("/")}>Home</a>
                       </li>
-                      <li className={`dropdown ${activePage === '/about' ? 'active' : ''}`}>
+                      <li className={`dropdown ${activePage === '/about' ? 'active' : ''}`} style={{cursor:"pointer"}}>
                         <a onClick={() => reloadPage("/about")}>About</a>
                       </li>
-                      <li className={`dropdown ${activePage === '/service' ? 'active' : ''}`}>
+                      <li className={`dropdown ${activePage === '/service' ? 'active' : ''}`} style={{cursor:"pointer"}}>
                         <a onClick={() => reloadPage("/service")}>Services</a>
                       </li>
-                      <li className={`dropdown ${activePage === '/blog' ? 'active' : ''}`}>
+                      <li className={`dropdown ${activePage === '/blog' ? 'active' : ''}`} style={{cursor:"pointer"}}>
                         <a onClick={() => reloadPage("/blog")}>Blog</a>
                       </li>
-                      <li className={` ${activePage === '/contact' ? 'active' : ''}`}>
+                      <li className={` ${activePage === '/contact' ? 'active' : ''}`} style={{cursor:"pointer"}}>
                         <a onClick={() => reloadPage("/contact")}>Contact Us</a>
                       </li>
                     </ul>
