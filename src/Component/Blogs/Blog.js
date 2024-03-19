@@ -31,7 +31,7 @@ function Blog() {
         <div>
             <div className="page-wrapper">
                 <Header />
-                <Banner/>
+                <Banner />
                 <div className="page-content">
                     <section className="site_content blog_classic">
                         <div className="container">
@@ -42,7 +42,7 @@ function Blog() {
                                             <article className="post blog-classic" key={slide._id}>
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
-                                                        <a onClick={reloadBlogdetailPage}>
+                                                        <a onClick={() => reloadBlogdetailPage(slide._id)}>
                                                             <img
                                                                 src={slide.image}
                                                                 className="img-fluid"
@@ -54,13 +54,13 @@ function Blog() {
                                                 <div className="pbmit-blog-classic-inner">
                                                     <div className="pbmit-blog-meta pbmit-blog-meta-top">
                                                         <span className="pbmit-meta pbmit-meta-cat">
-                                                            <a onClick={reloadBlogdetailPage} rel="category tag">
+                                                            <a onClick={() => reloadBlogdetailPage(slide._id)} rel="category tag">
                                                                 {slide.tagline}
                                                             </a>
                                                         </span>
                                                         <span className="pbmit-meta pbmit-meta-date">
                                                             <i className="pbmit-base-icon-calendar-3" />
-                                                            <a onClick={reloadBlogdetailPage} rel="bookmark">
+                                                            <a onClick={() => reloadBlogdetailPage(slide._id)} rel="bookmark">
                                                                 {slide.date}
                                                             </a>
                                                         </span>
@@ -75,43 +75,8 @@ function Blog() {
                                                             <p>{slide.description}</p>
                                                         </div>
                                                         <a
-                                                            onClick={reloadBlogdetailPage}
-                                                            className="pbmit-btn pbmit-btn-global"
+                                                            onClick={() => reloadBlogdetailPage(slide._id)}
                                                         >
-                                                            <span className="pbmit-btn-content-wrapper">
-                                                                <span className="pbmit-button-icon">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        width="22.76"
-                                                                        height="22.76"
-                                                                        viewBox="0 0 22.76 22.76"
-                                                                    >
-                                                                        <title>black-arrow</title>
-                                                                        <path
-                                                                            d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1"
-                                                                            transform="translate(-0.29 -0.29)"
-                                                                            fill="none"
-                                                                            stroke="#000"
-                                                                            strokeWidth={2}
-                                                                        />
-                                                                        <path
-                                                                            d="M22.34,1a14.67,14.67,0,0,0,0,20.75"
-                                                                            transform="translate(-0.29 -0.29)"
-                                                                            fill="none"
-                                                                            stroke="#000"
-                                                                            strokeWidth={2}
-                                                                        />
-                                                                        <path
-                                                                            d="M22.34,1,1,22.34"
-                                                                            transform="translate(-0.29 -0.29)"
-                                                                            fill="none"
-                                                                            stroke="#000"
-                                                                            strokeWidth={2}
-                                                                        />
-                                                                    </svg>
-                                                                </span>
-                                                                <span className="pbmit-button-text">Read More</span>
-                                                            </span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -160,7 +125,7 @@ function Blog() {
                                                     </h4>
                                                     <div className="pbmit-ads-desc">
                                                         <i className="pbmit-base-icon-phone-call-1" />
-                                                        +(123) 1234-567-8901
+                                                        +(91) 915-248-2025
                                                     </div>
                                                     <a className="pbmit-btn" href="#">
                                                         <span className="pbmit-btn-content-wrapper">

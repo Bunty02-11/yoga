@@ -39,15 +39,15 @@ function Aboutus() {
                                                         data-after=""
                                                         data-after-style=""
                                                     >
-                                                        235
+                                                        2,685
                                                     </span>
-                                                    <span className="pbmit-fid">
-                                                        <sup>+</sup>
-                                                    </span>
+                                                    <div className="pbmit-fid" style={{ position: 'relative' }}>
+                                                        <sup style={{ position: 'absolute', top: '-45px', left: '215px' }}>+</sup>
+                                                    </div>
                                                 </h4>
                                                 <div className="pbmit-fid-sub">
                                                     <div className="pbmit-heading-desc">
-                                                        Happy club members
+                                                        Hours of Teaching Experience
                                                     </div>
                                                 </div>
                                             </div>
@@ -79,12 +79,18 @@ function Aboutus() {
                         <div className="col-md-12 col-xl-6">
                             <div className="about-us-two_rightbox">
                                 <div className="pbmit-heading-subheading animation-style2">
-                                    <h4 className="pbmit-subtitle">About Us</h4>
+                                    <h4 className="pbmit-subtitle">About Trika</h4>
                                     <h2 className="pbmit-title">
-                                        Yoga
+                                        What is Trika's origin and its vision or mission?
                                     </h2>
-                                    <div className="pbmit-heading-desc">
-                                        Yoga is Life
+                                    <div className="pbmit-heading-desc" style={{ textAlign: 'justify' }}>
+                                        Trika Wellness Center embodies the essence of the universe's trinity - Shiv, Shakti, and Nara. It offers transformative experiences in yoga, sound healing therapy, and soulful retreats.<br />
+                                        <br />
+                                        Trika Yoga started with the aim of guiding individuals on a journey of self-discovery and holistic healing.
+                                        It was founded to offer a nurturing environment where people can reconnect with their inner child and experience aliveness, joy, and harmony.<br />
+                                        <br />
+                                        Trika envisions a supportive space where individuals embark on personal wellness journeys, nurturing mind, body, and spirit in a judgment-free environment.
+                                        Its mission: to guide people towards balance and harmony, helping them rediscover their essence and embrace fulfillment through yoga, sound healing therapy, and soulful retreats.
                                     </div>
                                 </div>
                                 <div className="about-us-two_ihbox">
@@ -101,10 +107,10 @@ function Aboutus() {
                                                     </div>
                                                     <div className="pbmit-ihbox-contents">
                                                         <h2 className="pbmit-element-title">
-                                                            Changing rooms
+                                                            Spirituality
                                                         </h2>
                                                         <div className="pbmit-heading-desc">
-                                                            Neque blandit consectetur viverra placerat ante.
+                                                            Find your center, find yourself with yoga.
                                                         </div>
                                                     </div>
                                                 </div>
@@ -122,10 +128,10 @@ function Aboutus() {
                                                     </div>
                                                     <div className="pbmit-ihbox-contents">
                                                         <h2 className="pbmit-element-title">
-                                                            Training Programs
+                                                            Body-Mind-Spirit
                                                         </h2>
                                                         <div className="pbmit-heading-desc">
-                                                            Neque blandit consectetur viverra placerat ante.
+                                                            Align your body, align your soul with yoga.
                                                         </div>
                                                     </div>
                                                 </div>
@@ -133,7 +139,7 @@ function Aboutus() {
                                         </div>
                                     </div>
                                 </div>
-                                <a className="pbmit-btn pbmit-btn-global" href="classes.html">
+                                {/* <a className="pbmit-btn pbmit-btn-global" href="classes.html">
                                     <span className="pbmit-btn-content-wrapper">
                                         <span className="pbmit-button-icon">
                                             <svg
@@ -168,7 +174,7 @@ function Aboutus() {
                                         </span>
                                         <span className="pbmit-button-text">know more</span>
                                     </span>
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>

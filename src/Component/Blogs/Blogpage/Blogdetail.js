@@ -7,9 +7,9 @@ import { useParams } from 'react-router-dom';
 function Blogdetail() {
     const [slides, setSlides] = useState([]);
     const param = useParams()
-    console.log(param.id,'d')
+    console.log(param.id, 'd')
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/blog/${param.id}`) 
+        axios.get(`http://localhost:8000/api/blog/${param.id}`)
             .then(response => {
                 console.log(response.data);
                 setSlides(response.data);
@@ -31,35 +31,36 @@ function Blogdetail() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-9 blog-right-col">
-                                  
-                                        <article key={slides.heading}>
-                                            <div className="post blog-classic">
-                                                <div className="pbmit-featured-img-wrapper">
-                                                    <div className="pbmit-featured-wrapper">
-                                                        <img
-                                                            src={slides.image}
-                                                            className="img-fluid"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div className="pbmit-blog-classic-inner">
-                                                    <div className="pbmit-blog-meta pbmit-blog-meta-top">
-                                                        {/* Meta Info */}
-                                                    </div>
-                                                    <div className="pbmit-entry-content">
-                                                        <p className="pbmit-firstletter">{slides.tagline}</p>
-                                                        <p>{slides.description}</p>
-                                                        {/* Map date here */}
-                                                        <p>Date: {new Date(slides.date).toLocaleDateString()}</p>
-                                                    </div>
+
+                                    <article key={slides.heading}>
+                                        <div className="post blog-classic">
+                                            <div className="pbmit-featured-img-wrapper">
+                                                <div className="pbmit-featured-wrapper">
+                                                    <img
+                                                        src={slides.image}
+                                                        className="img-fluid"
+                                                        alt=""
+                                                        style={{ width: '720px', height: '720px' }}
+                                                    />
                                                 </div>
                                             </div>
-                                        </article>
-                                  
+                                            <div className="pbmit-blog-classic-inner">
+                                                <div className="pbmit-blog-meta pbmit-blog-meta-top">
+                                                    {/* Meta Info */}
+                                                </div>
+                                                <div className="pbmit-entry-content">
+                                                    <p >{slides.tagline}</p>
+                                                    <p className="pbmit-firstletter">{slides.description}</p>
+                                                    {/* Map date here */}
+                                                    <p>Date: {new Date(slides.date).toLocaleDateString()}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
                                 </div>
                                 <div className="col-md-12 col-lg-3 blog-left-col">
-                                <aside className="sidebar">
+                                    <aside className="sidebar">
                                         <aside className="widget widget-recent-post">
                                             <h2 className="widget-title">Recent Post </h2>
                                             <ul className="recent-post-list">

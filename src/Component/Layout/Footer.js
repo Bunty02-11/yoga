@@ -15,11 +15,6 @@ function Footer() {
                       </a>
                     </li>
                     <li className="pbmit-icon-list-item pbmit-inline-item">
-                      <a href="our-team-member.html">
-                        <span className="pbmit-icon-list-text">Trainers</span>
-                      </a>
-                    </li>
-                    <li className="pbmit-icon-list-item pbmit-inline-item">
                       <a href="event-style-1.html">
                         <span className="pbmit-icon-list-text">Schedule</span>
                       </a>
@@ -42,7 +37,7 @@ function Footer() {
                         </div>
                       </div>
                       <div className="pbmit-ihbox-contents">
-                        <h2 className="pbmit-element-title">+ 1(212) 255-511</h2>
+                        <h2 className="pbmit-element-title">+91 91524-82025</h2>
                       </div>
                     </div>
                   </div>
@@ -81,8 +76,7 @@ function Footer() {
                   <div className="col-md-12 col-xl-4" />
                   <div className="col-md-12 col-xl-8 pbmit-footer-right">
                     <h3 className="pbmit-title">
-                      Professional &amp; modern, a theme designed to help <br />{" "}
-                      your business stand out from the rest.
+                    Inhale the future, exhale the past.
                     </h3>
                   </div>
                 </div>
@@ -98,9 +92,8 @@ function Footer() {
                           <img src="images/TRIKA YOGA.png" alt="" />
                         </div>
                         <div className="pbmit-footer-text">
-                          Mauris sed molestie sem. Sed vel vestibulum elit, non
-                          accumsan risus. In vitae sapien viverra est Duo ei ullum
-                          inani senserit.
+                        The body is your temple. Keep it pure and clean
+                        for the soul to reside in.
                         </div>
                         <ul className="pbmit-social-links">
                           <li className="pbmit-social-li pbmit-social-facebook">
@@ -155,7 +148,7 @@ function Footer() {
                       </div>
                     </aside>
                   </div>
-                  <div className="pbmit-footer-widget-col-2 col-md-6 col-lg-3">
+                  {/* <div className="pbmit-footer-widget-col-2 col-md-6 col-lg-3">
                     <div className="widget">
                       <h2 className="widget-title">Useful Link</h2>
                       <div className="textwidget">
@@ -172,7 +165,7 @@ function Footer() {
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="pbmit-footer-widget-col-3 col-md-6 col-lg-3">
                     <div className="widget">
                       <h2 className="widget-title">Working Time</h2>
@@ -201,7 +194,7 @@ function Footer() {
                     <aside className="widget">
                       <h2 className="widget-title">Our address</h2>
                       <div className="pbmit-contact-widget-line pbmit-contact-widget-address">
-                        Old Westbury 256, New York <br /> 11201, United States
+                      Vaikunthlal Mehta Rd, <br /> JVPD Scheme, Juhu, Mumbai, Maharashtra 400049
                       </div>
                     </aside>
                   </div>
@@ -215,7 +208,6 @@ function Footer() {
                     <div className="col-md-6">
                       <div className="pbmit-footer-copyright-text-area">
                         {" "}
-                        © 2023 PBM Infotech
                       </div>
                     </div>
                     <div className="col-md-6">

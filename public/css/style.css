@@ -229,12 +229,12 @@ form .pbmit-footer-newsletter button:hover .pbmit-button-icon{
 	padding: 45px 55px 70px 55px;
 }
 .about-us-two_img{
-	background-image: url(../images/homepage-2/about-img-01.jpeg);
+	background-image: url(../images/homepage-2/about-img-01.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 	border-radius: 30px;
-	padding: 320px;
+	padding: 375px;
 	position: relative;
 }
 .fid-style-2_box{

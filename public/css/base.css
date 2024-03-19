@@ -291,7 +291,7 @@ INDEX:
 	 transition: all .3s;
 	 z-index: 1;
 	 color: var(--pbmit-blackish-color);
-	 background-color: var(--pbmit-secondary-color);
+	 background-color: var(--pbmit-white-color);
 }
 .pbmit-btn .pbmit-btn-content-wrapper{
 	display: flex;

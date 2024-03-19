@@ -33,8 +33,9 @@ function Yogasection() {
                   <div className="pbmit-service-feature-image">
                     <img
                       src={selectedService.image}
-                      className="img-fluid w-100"
+                      className="img-fluid "
                       alt=""
+                      style={{ height: '600px', width: '600px' }}
                     />
                   </div>
                   <div className="pbmit-entry-content">
@@ -70,7 +71,40 @@ function Yogasection() {
                     </ul>
                   </div>
                 </aside>
-                {/* Other sidebar content */}
+                <aside className="widget pbmit-service-ad float-left ml-5 mt-neg-10">
+                  <div className="textwidget">
+                    <div className="pbmit-service-ads">
+                      <div className="pbmit-logo-img">
+                        <img src="images/widget-img.png" alt="" />
+                      </div>
+                      <h4 className="pbmit-ads-title">
+                        Book your yoga session
+                      </h4>
+                      <div className="pbmit-ads-desc">
+                        <i className="pbmit-base-icon-phone-call-1"></i>
+                        +(123) 1234-567-8901
+                      </div>
+                      <a className="pbmit-btn" href="#">
+                        <span className="pbmit-btn-content-wrapper">
+                          <span className="pbmit-button-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">
+                              <title>black-arrow</title>
+                              <path d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" strokeWidth="2"></path>
+                              <path d="M22.34,1a14.67,14.67,0,0,0,0,20.75" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" strokeWidth="2"></path>
+                              <path d="M22.34,1,1,22.34" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" strokeWidth="2"></path>
+                            </svg>
+                          </span>
+                          <span className="pbmit-button-text">
+                            Register now
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </aside>
+
+
+
               </aside>
             </div>
           </div>

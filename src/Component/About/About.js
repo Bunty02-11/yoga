@@ -40,7 +40,7 @@ function About() {
                                             <div className="pbmit-text d-flex align-items-center justify-content-center">
                                                 <div className="pbminfotech-static-box-number">01</div>
                                                 <div className="pbminfotech-box-title">
-                                                    <h4>Protection From Injury</h4>
+                                                    <h4>Stress Reduction and Mental Clarity</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,11 +55,11 @@ function About() {
                                         <div className="pbmit-contentbox-inner">
                                             <div className="pbmit-ihbox-icon" />
                                             <div className="pbminfotech-box-title">
-                                                <h4>Protection From Injury</h4>
+                                                <h4>Stress Reduction and Mental Clarity</h4>
                                             </div>
                                             <div className="pbminfotech-static-box-desc">
-                                                There are many variations of passages of Lorem Ipsum
-                                                available, but the majority have suffered alteration.
+                                            Yoga calms the mind, lowers stress, enhances clarity,
+                                            and improves mental well-being through mindful breathwork.
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@ function About() {
                                             <div className="pbmit-text d-flex align-items-center justify-content-center">
                                                 <div className="pbminfotech-static-box-number">02</div>
                                                 <div className="pbminfotech-box-title">
-                                                    <h4>Weight Reduction</h4>
+                                                    <h4>Improved Flexibility and Strength</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,11 +91,10 @@ function About() {
                                         <div className="pbmit-contentbox-inner">
                                             <div className="pbmit-ihbox-icon" />
                                             <div className="pbminfotech-box-title">
-                                                <h4>Weight Reduction</h4>
+                                                <h4>Improved Flexibility and Strength</h4>
                                             </div>
                                             <div className="pbminfotech-static-box-desc">
-                                                There are many variations of passages of Lorem Ipsum
-                                                available, but the majority have suffered alteration.
+                                            Yoga enhances flexibility and strength by stretching muscles and engaging diverse muscle groups in various poses.
                                             </div>
                                         </div>
                                     </div>
@@ -112,7 +111,7 @@ function About() {
                                             <div className="pbmit-text d-flex align-items-center justify-content-center">
                                                 <div className="pbminfotech-static-box-number">03</div>
                                                 <div className="pbminfotech-box-title">
-                                                    <h4>Increased Flexibility</h4>
+                                                    <h4>Enhanced Balance and Coordination</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -127,11 +126,11 @@ function About() {
                                         <div className="pbmit-contentbox-inner">
                                             <div className="pbmit-ihbox-icon" />
                                             <div className="pbminfotech-box-title">
-                                                <h4>Increased Flexibility</h4>
+                                                <h4>Enhanced Balance and Coordination</h4>
                                             </div>
                                             <div className="pbminfotech-static-box-desc">
-                                                There are many variations of passages of Lorem Ipsum
-                                                available, but the majority have suffered alteration.
+                                            Yoga improves balance, coordination, and body awareness, 
+                                            reducing falls and enhancing physical performance through alignment-focused poses.
                                             </div>
                                         </div>
                                     </div>
