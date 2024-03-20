@@ -9,6 +9,7 @@ import Blogdetail from './Component/Blogs/Blogpage/Blogdetail'
 function App() {
   return (
     <div>
+      
       <HashRouter>
         <Routes>
           <Route exact path='/' element={<Home />} />
