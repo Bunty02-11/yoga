@@ -2150,7 +2150,7 @@ body {
 	color: var(--pbmit-white-color);
 }
 .pbmit-element-service-style-3 .pbmit-hover-inner li:hover .pbmit-title-data-hover .pbmit-title-inner{
-	color: var(--pbmit-secondary-color);
+	color: var(--pbmit-blackish-color);
 }
 .pbmit-element-service-style-3 .pbmit-hover-inner li:hover .pbmit-serv-cat{
 	transform: translate(20px,0);
@@ -2164,7 +2164,7 @@ body {
 	height: 8px;
 	border-radius: 50%;
 	transform: translate(0 , -50%);
-	background-color: var(--pbmit-secondary-color);
+	background-color: var(--pbmit-white-color);
 }
 .pbmit-element-service-style-3 .pbmit-title-inner{
 	font-size: 36px;
@@ -2186,8 +2186,8 @@ body {
 	font-size: 14px;
 }
 .pbmit-element-service-style-3 .pbmit-hover-inner li:hover .pbmit-service-btn a{
-	color: var(--pbmit-blackish-color);
-	background-color: var(--pbmit-secondary-color);
+	color: var(--pbmit-white-color);
+	background-color: var(--pbmit-blackish-color);
 }
 .pbmit-element-service-style-3 .pbmit-service-btn .pbmit-button-icon-wrapper{
 	position: relative;
@@ -4041,11 +4041,10 @@ body {
 	display: inline-block;
     position: relative;
     overflow: hidden;
-    transition: 2s cubic-bezier(0.5, 0.5, 0, 1);
+    
 }
 .pbmit-animation-style4 img{
 	transform-origin: 50% 50%;
-	transition: 2s cubic-bezier(0.5, 0.5, 0, 1);
 }
 
 /* --------------------------------------

@@ -3,6 +3,16 @@ import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function Service() {
+    const navigate = useNavigate();
+
+
+    const reloadServicePage = () => {
+        navigate(`/service`);
+        window.scrollTo(0, 0);
+        window.location.reload();
+    };
+
+
     const [data, setData] = useState([]);
     const [hoveredService, setHoveredService] = useState(null);
     const [hoverTimeout, setHoverTimeout] = useState(null);
@@ -27,8 +37,9 @@ function Service() {
 
     const handleMouseLeave = () => {
         clearTimeout(hoverTimeout);
+        setHoveredService(null); // Reset the hovered service
     };
-
+    
     const defaultServiceImage = data.length > 0 ? data[0].serviceImage : '';
 
     return (
@@ -37,13 +48,13 @@ function Service() {
                 <div className="container">
                     <div className="position-relative">
                         <div className="pbmit-heading-subheading text-white animation-style2">
-                            <h4 className="pbmit-subtitle">Our Services</h4>
-                            <h2 className="pbmit-title">Our Main Services</h2>
+                            <h4 className="pbmit-subtitle">Features</h4>
+                            <h2 className="pbmit-title">Principal Functions</h2>
                         </div>
                         <div className="service-three_btn">
                             <a
                                 className="pbmit-btn pbmit-btn-outline"
-                                href="service-details.html"
+                            
                             >
                                 <span className="pbmit-btn-content-wrapper">
                                     <span className="pbmit-button-icon">
@@ -77,14 +88,14 @@ function Service() {
                                             />
                                         </svg>
                                     </span>
-                                    <span className="pbmit-button-text">View All</span>
+                                    <span className="pbmit-button-text" onClick={reloadServicePage}>View All</span>
                                 </span>
                             </a>
                         </div>
                     </div>
                     <div className="pbmit-element-service-style-3">
-                        <div className="pbmit-main-hover-slider d-flex align-items-center">
-                            <div className="swiper-hover-slide-images col-md-5 col-lg-5">
+                        <div className="pbmit-main-hover-slider d-flex align-items-center flex-wrap">
+                            <div className="swiper-hover-slide-images col-md-5 col-lg-5 col-12 order-2 order-md-1">
                                 <div className="swiper pbmit-hover-image">
                                     <div className="swiper-wrapper">
                                         <div className="swiper-slide">
@@ -93,6 +104,7 @@ function Service() {
                                                     <img
                                                         src={hoveredService ? hoveredService.serviceImage : defaultServiceImage}
                                                         alt={hoveredService ? hoveredService.title : ''}
+                                                        className="img-fluid"
                                                     />
                                                 </div>
                                             </div>
@@ -100,7 +112,7 @@ function Service() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="swiper-hover-slide-nav col-md-7 col-lg-7">
+                            <div className="swiper-hover-slide-nav col-md-7 col-lg-7 col-12 order-1 order-md-2">
                                 <ul className="pbmit-hover-inner">
                                     {data.map((item, index) => (
                                         <li
@@ -115,18 +127,18 @@ function Service() {
                                                 className="pbmit-title-data-hover d-flex align-items-center"
                                                 data-text="Ardha Chakrasana"
                                             >
-                                                <span className="pbmit-text-content">
+                                                <span  className="pbmit-text-content">
                                                     <span className="pbmit-serv-cat">
-                                                        <a href="service-details.html" rel="tag">
+                                                        <a rel="tag" onClick={reloadServicePage}>
                                                             {item.serviceName}
                                                         </a>
                                                     </span>
-                                                    <a className="pbmit-title-inner" href="service-details.html">
-                                                        <span>{item.serviceDescription}</span>
+                                                    <a className="pbmit-title-inner" >
+                                                        <span >{item.serviceDescription}</span>
                                                     </a>
                                                 </span>
                                                 <span className="pbmit-service-btn">
-                                                    <a href="service-details.html">
+                                                    <a>
                                                         <span className="pbmit-button-icon-wrapper">
                                                             <span className="pbmit-button-icon">
                                                                 <i className="pbmit-base-icon-black-arrow-1" />
@@ -135,7 +147,7 @@ function Service() {
                                                     </a>
                                                 </span>
                                             </h3>
-                                            <a className="pbmit-link" href="service-details.html" />
+                                            <a className="pbmit-link" />
                                         </li>
                                     ))}
                                 </ul>

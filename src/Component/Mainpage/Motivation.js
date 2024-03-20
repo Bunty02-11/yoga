@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Motivation() {
+
+    const navigate = useNavigate();
+
+
+    const reloadAboutPage = () => {
+        navigate('/about');
+        window.scrollTo(0, 0);
+        window.location.reload();
+    };
+
 
     // const [slides, setSlides] = useState([]);
     const [data, setData] = useState([]);
@@ -36,7 +47,7 @@ function Motivation() {
                         <div className="tab_btn">
                             <a
                                 className="pbmit-btn pbmit-btn-outline"
-                                href="about-us.html"
+                                onClick={reloadAboutPage}
                                 data-magnetic=""
                             >
                                 <span className="pbmit-btn-content-wrapper">
@@ -71,7 +82,7 @@ function Motivation() {
                                             />
                                         </svg>
                                     </span>
-                                    <span className="pbmit-button-text">View All</span>
+                                    <span className="pbmit-button-text" onClick={reloadAboutPage}>View All</span>
                                 </span>
                             </a>
                         </div>

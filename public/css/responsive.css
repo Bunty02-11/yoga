@@ -854,7 +854,7 @@ body {
 		padding: 60px 0px 80px 0px;
 	}
 	.pbmit-element-service-style-3 .pbmit-hover-image{
-		display: none;
+		/* display: none; */
 	}
 	.pbmit-element-service-style-3 .pbmit-main-hover-slider{
 		display: block !important;
@@ -1221,17 +1221,9 @@ body {
 
 @media(min-width:991px){
 	/*=== Img Animation ===*/
-	.pbmit-animation-style4{
-		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-	}
+	
 	.pbmit-animation-style4.active{
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-	}
-	.pbmit-animation-style4 img{
-		transform: scale(1.5) translate(0, -100px);
-	}
-	.pbmit-animation-style4.active img{
-		transform: scale(1) translate(0px, 0px);
 	}
 	.pbmit-animation-style7 img {
 		transform: scale(0.5);

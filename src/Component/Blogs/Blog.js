@@ -4,10 +4,18 @@ import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
 import axios from 'axios';
 import Banner from '../About/Banner';
+import MediaComponent from './MediaComponent/Media'
 
 function Blog() {
+
     const [slides, setSlides] = useState([]);
     const navigate = useNavigate();
+
+    const reloadContactPage = () => {
+        navigate(`/contact`);
+        window.scrollTo(0, 0);
+        window.location.reload();
+    };
 
 
     const reloadBlogdetailPage = (id) => {
@@ -43,11 +51,8 @@ function Blog() {
                                                 <div className="pbmit-featured-img-wrapper">
                                                     <div className="pbmit-featured-wrapper">
                                                         <a onClick={() => reloadBlogdetailPage(slide._id)}>
-                                                            <img
-                                                                src={slide.image}
-                                                                className="img-fluid"
-                                                                alt=""
-                                                            />
+                                                            <MediaComponent control={1} style={{ width: '60%', marginLeft: '20%', borderRadius: '20px' }} src={slide.image} />
+                                                            {/* <MediaComponent src="https://easytender.s3.ap-south-1.amazonaws.com/1710854219564.png"/> */}
                                                         </a>
                                                     </div>
                                                 </div>
@@ -92,11 +97,7 @@ function Blog() {
                                                 {slides.slice(2).map(slide => (
                                                     <li className="recent-post-list-li" key={slide.heading}>
                                                         <a className="recent-post-thum" onClick={() => reloadBlogdetailPage(slide._id)}>
-                                                            <img
-                                                                src={slide.image}
-                                                                className="img-fluid"
-                                                                alt=""
-                                                            />
+                                                            <MediaComponent control={0} src={slide.image} style={{ borderRadius: '50px' }} />
                                                         </a>
                                                         <div className="pbmit-rpw-content">
                                                             <span className="pbmit-rpw-date">
@@ -125,7 +126,7 @@ function Blog() {
                                                     </h4>
                                                     <div className="pbmit-ads-desc">
                                                         <i className="pbmit-base-icon-phone-call-1" />
-                                                        +(91) 915-248-2025
+                                                        +91 91524-82025
                                                     </div>
                                                     <a className="pbmit-btn" href="#">
                                                         <span className="pbmit-btn-content-wrapper">
@@ -161,7 +162,7 @@ function Blog() {
                                                                 </svg>
                                                             </span>
                                                             <span className="pbmit-button-text">
-                                                                Register now
+                                                                <a onClick={reloadContactPage}>Register now</a>
                                                             </span>
                                                         </span>
                                                     </a>

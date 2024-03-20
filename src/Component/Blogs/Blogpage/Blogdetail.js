@@ -3,6 +3,8 @@ import Header from '../../Layout/Header';
 import Footer from '../../Layout/Footer';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import MediaComponent from '../MediaComponent/Media'
+import Banner from '../../About/Banner';
 
 function Blogdetail() {
     const [slides, setSlides] = useState([]);
@@ -23,9 +25,8 @@ function Blogdetail() {
         <div>
             <div className="page-wrapper">
                 <Header />
-                <div className="pbmit-title-bar-wrapper">
-                    {/* Title Bar Content */}
-                </div>
+                <Banner />
+              
                 <div className="page-content">
                     <section className="site_content blog-details">
                         <div className="container">
@@ -36,12 +37,7 @@ function Blogdetail() {
                                         <div className="post blog-classic">
                                             <div className="pbmit-featured-img-wrapper">
                                                 <div className="pbmit-featured-wrapper">
-                                                    <img
-                                                        src={slides.image}
-                                                        className="img-fluid"
-                                                        alt=""
-                                                        style={{ width: '720px', height: '720px' }}
-                                                    />
+                                                    <MediaComponent control={1} className="img-fluid" src={slides.image} style={{ width: '60%' ,marginLeft:'20%' ,borderRadius:'20px'}} />
                                                 </div>
                                             </div>
                                             <div className="pbmit-blog-classic-inner">

@@ -166,7 +166,7 @@ function Footer() {
                       </div>
                     </div>
                   </div> */}
-                  <div className="pbmit-footer-widget-col-3 col-md-6 col-lg-3">
+                  {/* <div className="pbmit-footer-widget-col-3 col-md-6 col-lg-3">
                     <div className="widget">
                       <h2 className="widget-title">Working Time</h2>
                       <div className="pbmit-timelist-wrapper">
@@ -189,7 +189,7 @@ function Footer() {
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="pbmit-footer-widget-col-4 col-md-6 col-lg-3">
                     <aside className="widget">
                       <h2 className="widget-title">Our address</h2>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom'; // Import useLocation hook
 
 function Banner() {
     const [banners, setBanners] = useState([]);
+    const location = useLocation(); // Get current location
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/banner')
@@ -13,6 +15,17 @@ function Banner() {
                 console.log(error);
             });
     }, []);
+
+    const capitalizeFirstLetter = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    };
+
+    const getCurrentPageName = () => {
+        const path = location.pathname; // Get current path from location
+        // Logic to extract page name from path (You might need to customize this)
+        const pageName = path.split('/').pop(); // Get the last segment of the path
+        return capitalizeFirstLetter(pageName); // Capitalize the page name
+    };
 
     return (
         <div>
@@ -27,14 +40,15 @@ function Banner() {
                             <div className="pbmit-title-bar-content-inner">
                                 <div className="pbmit-tbar">
                                     <div className="pbmit-tbar-inner container">
-                                        <h1 className="pbmit-tbar-title"> About Us</h1>
+                                        {/* Set title dynamically */}
+                                        <h1 className="pbmit-tbar-title">{getCurrentPageName()}</h1>
                                     </div>
                                 </div>
                                 <div className="pbmit-breadcrumb">
                                     <div className="pbmit-breadcrumb-inner">
                                         <span>
                                             <a title="" href="#" className="home">
-                                                <span>Yoge</span>
+                                                <span>Trika</span>
                                             </a>
                                         </span>
                                         <span className="sep">
@@ -43,7 +57,7 @@ function Banner() {
                                         <span>
                                             <span className="post-root post post-post current-item">
                                                 {" "}
-                                                About Us
+                                                {getCurrentPageName()} {/* Set breadcrumb dynamically */}
                                             </span>
                                         </span>
                                     </div>

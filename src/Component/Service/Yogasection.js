@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Yogasection() {
+  const navigate = useNavigate();
+
+
+  const reloadContactPage = () => {
+      navigate(`/contact`);
+      window.scrollTo(0, 0);
+      window.location.reload();
+  };
+
+
   const [services, setServices] = useState([]);
   const [selectedService, setSelectedService] = useState([]);
 
@@ -82,7 +93,7 @@ function Yogasection() {
                       </h4>
                       <div className="pbmit-ads-desc">
                         <i className="pbmit-base-icon-phone-call-1"></i>
-                        +(123) 1234-567-8901
+                        +91 91524-82025
                       </div>
                       <a className="pbmit-btn" href="#">
                         <span className="pbmit-btn-content-wrapper">
@@ -95,16 +106,13 @@ function Yogasection() {
                             </svg>
                           </span>
                           <span className="pbmit-button-text">
-                            Register now
+                            <a onClick={reloadContactPage}>Register now</a>
                           </span>
                         </span>
                       </a>
                     </div>
                   </div>
                 </aside>
-
-
-
               </aside>
             </div>
           </div>

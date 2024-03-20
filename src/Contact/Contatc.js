@@ -28,7 +28,7 @@ function Contatc() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/ ', formData);
+      const response = await axios.post('http://localhost:8000/api/addcontact ', formData);
       setSuccessMessage('Message sent successfully!');
       setErrorMessage('');
       setFormData({
@@ -145,8 +145,8 @@ function Contatc() {
                     Contact &amp; hire us for your fitness!
                   </h2>
                   <div className="mt-4">
-                    There are many variations of passages of Lorem Ipsum available,
-                    but the in some form, or randomised words which don't look even.
+                  Begin your transformative yoga journey today. 
+                  Contact us now for guidance and support on your path to wellness.
                   </div>
                 </div>
                 <div className="row g-0">
@@ -185,7 +185,7 @@ function Contatc() {
                     <div className="contact-us-right-box">
                       <div className="contact-us-right_img">
                         <div className="pbmit-animation-style4">
-                          <img src="images/contact-us-img.png" alt="" />
+                          <img src="images/contact-us-img.jpg" alt="" />
                         </div>
                       </div>
                       <div className="ihbox-style_11">
@@ -193,7 +193,7 @@ function Contatc() {
                           <div className="pbmit-ihbox-headingicon">
                             <div className="pbmit-ihbox-contents">
                               <h2 className="pbmit-element-title">
-                                Relax body &amp; mind for visit our yoga session!!
+                                Relax your Body & Mind with Trika 
                               </h2>
                               <h4 className="pbmit-element-heading">
                                 Opening days :
