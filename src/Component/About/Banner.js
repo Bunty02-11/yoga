@@ -7,7 +7,7 @@ function Banner() {
     const location = useLocation(); // Get current location
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/banner')
+        axios.get('http://13.126.67.232:8000/api/banner')
             .then(response => {
                 setBanners(response.data.banner);
             })

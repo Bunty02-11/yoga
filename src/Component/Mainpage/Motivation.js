@@ -25,7 +25,7 @@ function Motivation() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/get/motivations')
+        axios.get('http://13.126.67.232:8000/api/get/motivations')
             .then(response => {
                 console.log(response.data);
                 setData(response.data);

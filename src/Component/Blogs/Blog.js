@@ -25,7 +25,7 @@ function Blog() {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/blog')
+        axios.get('http://13.126.67.232:8000/api/blog')
             .then(response => {
                 console.log(response.data);
                 setSlides(response.data);

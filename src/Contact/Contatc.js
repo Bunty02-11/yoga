@@ -28,7 +28,7 @@ function Contatc() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/addcontact ', formData);
+      const response = await axios.post('http://13.126.67.232:8000/api/addcontact ', formData);
       setSuccessMessage('Message sent successfully!');
       setErrorMessage('');
       setFormData({
@@ -74,7 +74,7 @@ function Contatc() {
                         <div className="pbmit-ihbox-contents">
                           <h2 className="pbmit-element-title">24/7 Contact us</h2>
                           <div className="pbmit-heading-desc">
-                            Mobile : (+91) 915- 248 - 2025
+                            Mobile : +91 91524 82025
                           </div>
                         </div>
                       </div>
@@ -98,16 +98,8 @@ function Contatc() {
                               className="__cf_email__"
                               data-cfemail="711f1e5c0314011d083101131c18055f121e1c"
                             >
-                              [email&nbsp;protected]
+                              soniya@trika.co.in
                             </a>{" "}
-                            <br />{" "}
-                            <a
-                              href="https://yoge-demo.pbminfotech.com/cdn-cgi/l/email-protection"
-                              className="__cf_email__"
-                              data-cfemail="f19f9edc8394819d88b181939c9885df929e9c"
-                            >
-                              [email&nbsp;protected]
-                            </a>
                           </div>
                         </div>
                       </div>

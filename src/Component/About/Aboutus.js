@@ -5,7 +5,7 @@ function Aboutus() {
     const [data, setData] = useState('')
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/get/about')
+        axios.get('http://13.126.67.232:8000/api/get/about')
             .then(response => {
                 console.log(response);
                 setData(response.data);
