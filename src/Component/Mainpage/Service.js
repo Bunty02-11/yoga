@@ -33,55 +33,56 @@ function Service() {
 
     return (
         <div>
-            <section className="section-xl pbmit-extend-animation service-three_bg pbmit-bg-color-global">
-                <div className="container">
-                    <div className="position-relative">
-                        <div className="pbmit-heading-subheading text-white animation-style2">
-                            <h4 className="pbmit-subtitle">Our Services</h4>
-                            <h2 className="pbmit-title">Our Main Services</h2>
-                        </div>
-                        <div className="service-three_btn">
-                            <a
-                                className="pbmit-btn pbmit-btn-outline"
-                                href="service-details.html"
-                            >
-                                <span className="pbmit-btn-content-wrapper">
-                                    <span className="pbmit-button-icon">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="22.76"
-                                            height="22.76"
-                                            viewBox="0 0 22.76 22.76"
-                                        >
-                                            <title>black-arrow</title>
-                                            <path
-                                                d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1"
-                                                transform="translate(-0.29 -0.29)"
-                                                fill="none"
-                                                stroke="#000"
-                                                strokeWidth={2}
-                                            />
-                                            <path
-                                                d="M22.34,1a14.67,14.67,0,0,0,0,20.75"
-                                                transform="translate(-0.29 -0.29)"
-                                                fill="none"
-                                                stroke="#000"
-                                                strokeWidth={2}
-                                            />
-                                            <path
-                                                d="M22.34,1,1,22.34"
-                                                transform="translate(-0.29 -0.29)"
-                                                fill="none"
-                                                stroke="#000"
-                                                strokeWidth={2}
-                                            />
-                                        </svg>
-                                    </span>
-                                    <span className="pbmit-button-text">View All</span>
-                                </span>
-                            </a>
-                        </div>
+        <section className="section-xl pbmit-extend-animation service-three_bg pbmit-bg-color-global">
+            <div className="container">
+                <div className="position-relative">
+                    <div className="pbmit-heading-subheading text-white animation-style2">
+                        <h4 className="pbmit-subtitle">Our Services</h4>
+                        <h2 className="pbmit-title">Our Main Services</h2>
                     </div>
+                    <div className="service-three_btn">
+                        <a
+                            className="pbmit-btn pbmit-btn-outline"
+                            href="service-details.html"
+                        >
+                            <span className="pbmit-btn-content-wrapper">
+                                <span className="pbmit-button-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22.76"
+                                        height="22.76"
+                                        viewBox="0 0 22.76 22.76"
+                                    >
+                                        <title>black-arrow</title>
+                                        <path
+                                            d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1"
+                                            transform="translate(-0.29 -0.29)"
+                                            fill="none"
+                                            stroke="#000"
+                                            strokeWidth={2}
+                                        />
+                                        <path
+                                            d="M22.34,1a14.67,14.67,0,0,0,0,20.75"
+                                            transform="translate(-0.29 -0.29)"
+                                            fill="none"
+                                            stroke="#000"
+                                            strokeWidth={2}
+                                        />
+                                        <path
+                                            d="M22.34,1,1,22.34"
+                                            transform="translate(-0.29 -0.29)"
+                                            fill="none"
+                                            stroke="#000"
+                                            strokeWidth={2}
+                                        />
+                                    </svg>
+                                </span>
+                                <span className="pbmit-button-text">View All</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                {window.innerWidth >= 1200 ? (
                     <div className="pbmit-element-service-style-3">
                         <div className="pbmit-main-hover-slider d-flex align-items-center">
                             <div className="swiper-hover-slide-images col-md-5 col-lg-5">
@@ -89,7 +90,7 @@ function Service() {
                                     <div className="swiper-wrapper">
                                         <div className="swiper-slide">
                                             <div className="pbmit-featured-img-wrapper">
-                                                <div className="pbmit-featured-wrapper">
+                                                <div  className="pbmit-featured-wrapper">
                                                     <img
                                                         src={hoveredService ? hoveredService.serviceImage : defaultServiceImage}
                                                         alt={hoveredService ? hoveredService.title : ''}
@@ -117,16 +118,16 @@ function Service() {
                                             >
                                                 <span className="pbmit-text-content">
                                                     <span className="pbmit-serv-cat">
-                                                        <a href="service-details.html" rel="tag">
+                                                        <a rel="tag">
                                                             {item.serviceName}
                                                         </a>
                                                     </span>
-                                                    <a className="pbmit-title-inner" href="service-details.html">
+                                                    <a className="pbmit-title-inner">
                                                         <span>{item.serviceDescription}</span>
                                                     </a>
                                                 </span>
                                                 <span className="pbmit-service-btn">
-                                                    <a href="service-details.html">
+                                                    <a>
                                                         <span className="pbmit-button-icon-wrapper">
                                                             <span className="pbmit-button-icon">
                                                                 <i className="pbmit-base-icon-black-arrow-1" />
@@ -135,16 +136,91 @@ function Service() {
                                                     </a>
                                                 </span>
                                             </h3>
-                                            <a className="pbmit-link" href="service-details.html" />
+                                            <a className="pbmit-link" />
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                ) : (
+                    <div className="pbmit-element-service-style-3">
+                        <div className="pbmit-main-hover-slider d-flex align-items-center">
+                            <ul className="pbmit-hover-inner">
+                            {hoveredService?null:(
+                                 <img style={{width:"80%",borderRadius:"20px"}} src={defaultServiceImage} alt={''} />
+                                )}
+                                {data.map((item, index) => (
+                                    <li
+                                        key={index}
+                                        onMouseEnter={() => handleMouseEnter(item)}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <span className="pbmit-service-icon">
+                                            <i className="pbmit-yoge-icon pbmit-yoge-icon-yoga-pose" />
+                                        </span>
+                                        <h3
+                                            className="pbmit-title-data-hover d-flex align-items-center"
+                                            data-text="Ardha Chakrasana"
+                                        >
+                                        <div className="swiper-hover-slide-images col-md-5 col-lg-5">
+                                            <div className="swiper pbmit-hover-image">
+                                                <div className="swiper-wrapper">
+                                                    <div className="swiper-slide">
+                                                        <div className="pbmit-featured-img-wrapper">
+                                                            <div style={{width:"80%"}} className="pbmit-featured-wrapper">
+                                                          
+                                                                {hoveredService === item && (
+                                                                    <img
+                                                                        src={item.serviceImage}
+                                                                        alt={item.title}
+                                                                    />
+                                                                )}
+                                                                {hoveredService !== item && (
+                                                                    <img
+                                                                        style={{ display: 'none' }}
+                                                                        src={item.serviceImage}
+                                                                        alt={item.title}
+                                                                    />
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                            <span className="pbmit-text-content">
+                                                <span className="pbmit-serv-cat">
+                                                    <a rel="tag">
+                                                        {item.serviceName}
+                                                    </a>
+                                                </span>
+                                                <a className="pbmit-title-inner">
+                                                    <span>{item.serviceDescription}</span>
+                                                </a>
+                                            </span>
+                                            <span className="pbmit-service-btn">
+                                                <a>
+                                                    <span className="pbmit-button-icon-wrapper">
+                                                        <span className="pbmit-button-icon">
+                                                            <i className="pbmit-base-icon-black-arrow-1" />
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </h3>
+                                        <a className="pbmit-link" />
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </section>
+    </div>
+    
     );
 }
 
