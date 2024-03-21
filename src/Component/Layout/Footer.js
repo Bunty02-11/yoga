@@ -76,7 +76,7 @@ function Footer() {
                   <div className="col-md-12 col-xl-4" />
                   <div className="col-md-12 col-xl-8 pbmit-footer-right">
                     <h3 className="pbmit-title">
-                    Inhale the future, exhale the past.
+                    Return Home to Yourself: Rediscover Your Essence
                     </h3>
                   </div>
                 </div>

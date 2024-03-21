@@ -81,16 +81,16 @@ function Aboutus() {
                                 <div className="pbmit-heading-subheading animation-style2">
                                     <h4 className="pbmit-subtitle">About Trika</h4>
                                     <h2 className="pbmit-title">
-                                        What is Trika's origin and its vision or mission?
+                                        What is Trika's origin and its Vision or Mission?
                                     </h2>
                                     <div className="pbmit-heading-desc" style={{ textAlign: 'justify' }}>
-                                        Trika Wellness Center embodies the essence of the universe's trinity - Shiv, Shakti, and Nara. It offers transformative experiences in yoga, sound healing therapy, and soulful retreats.<br />
+                                        Trika Wellness embodies the essence of the universe's trinity - Shiv, Shakti, and Nara. It offers transformative experiences in yoga, sound healing therapy, and soulful retreats.<br />
                                         <br />
                                         Trika Yoga started with the aim of guiding individuals on a journey of self-discovery and holistic healing.
                                         It was founded to offer a nurturing environment where people can reconnect with their inner child and experience aliveness, joy, and harmony.<br />
                                         <br />
                                         Trika envisions a supportive space where individuals embark on personal wellness journeys, nurturing mind, body, and spirit in a judgment-free environment.
-                                        Its mission: to guide people towards balance and harmony, helping them rediscover their essence and embrace fulfillment through yoga, sound healing therapy, and soulful retreats.
+                                        Its mission: to guide people towards balance and harmony, helping them rediscover their essence and embrace fulfillment through yoga and sound healing therapy .
                                     </div>
                                 </div>
                                 <div className="about-us-two_ihbox">

@@ -45,6 +45,9 @@ function Contatc() {
     setIsLoading(false);
   };
 
+  
+
+
   return (
     <div>
       <>
@@ -94,11 +97,11 @@ function Contatc() {
                           <h2 className="pbmit-element-title">24/7 Mail us</h2>
                           <div className="pbmit-heading-desc">
                             <a
-                              href="https://yoge-demo.pbminfotech.com/cdn-cgi/l/email-protection"
+                              href="mailto:your-email@example.com"
                               className="__cf_email__"
                               data-cfemail="711f1e5c0314011d083101131c18055f121e1c"
                             >
-                              soniya@trika.co.in
+                              sonia@trika.co.in
                             </a>{" "}
                           </div>
                         </div>
@@ -118,7 +121,7 @@ function Contatc() {
                         <div className="pbmit-ihbox-contents">
                           <h2 className="pbmit-element-title">Our Address</h2>
                           <div className="pbmit-heading-desc">
-                          Vaikunthlal Mehta Rd, <br />JVPD Scheme, Juhu, Mumbai, Maharashtra 400049.
+                            Vaikunthlal Mehta Rd, <br />JVPD Scheme, Juhu, Mumbai, Maharashtra 400049.
                           </div>
                         </div>
                       </div>
@@ -137,8 +140,8 @@ function Contatc() {
                     Contact &amp; hire us for your fitness!
                   </h2>
                   <div className="mt-4">
-                  Begin your transformative yoga journey today. 
-                  Contact us now for guidance and support on your path to wellness.
+                    Begin your transformative yoga journey today.
+                    Contact us now for guidance and support on your path to wellness.
                   </div>
                 </div>
                 <div className="row g-0">
@@ -185,7 +188,7 @@ function Contatc() {
                           <div className="pbmit-ihbox-headingicon">
                             <div className="pbmit-ihbox-contents">
                               <h2 className="pbmit-element-title">
-                                Relax your Body & Mind with Trika 
+                                Relax your Body & Mind with Trika
                               </h2>
                               <h4 className="pbmit-element-heading">
                                 Opening days :
