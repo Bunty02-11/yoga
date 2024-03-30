@@ -5,7 +5,7 @@ function Aboutus() {
     const [data, setData] = useState('')
 
     useEffect(() => {
-        axios.get('http://13.126.67.232:8000/api/get/about')
+        axios.get('http://65.1.14.171:8000/api/get/about')
             .then(response => {
                 console.log(response);
                 setData(response.data);
@@ -39,7 +39,7 @@ function Aboutus() {
                                                         data-after=""
                                                         data-after-style=""
                                                     >
-                                                        2,685
+                                                        2,805
                                                     </span>
                                                     <div className="pbmit-fid" style={{ position: 'relative' }}>
                                                         <sup style={{ position: 'absolute', top: '-45px', left: '215px' }}>+</sup>
@@ -84,13 +84,13 @@ function Aboutus() {
                                         What is Trika's origin and its Vision or Mission?
                                     </h2>
                                     <div className="pbmit-heading-desc" style={{ textAlign: 'justify' }}>
-                                        Trika Wellness embodies the essence of the universe's trinity - Shiv, Shakti, and Nara. It offers transformative experiences in yoga, sound healing therapy, and soulful retreats.<br />
+                                        Trika Wellness  recognizes the profound impact of its offerings on mental health and well-being. Through practices such as yoga and sound healing therapy, individuals can experience a profound sense of calm, clarity, and inner peace.<br />
                                         <br />
-                                        Trika Yoga started with the aim of guiding individuals on a journey of self-discovery and holistic healing.
-                                        It was founded to offer a nurturing environment where people can reconnect with their inner child and experience aliveness, joy, and harmony.<br />
+                                        These modalities have been shown to reduce stress, alleviate anxiety, and promote mental resilience. By fostering a supportive community and providing tools for self-care and introspection, Trika empowers individuals to cultivate greater emotional balance and psychological well-being.
+                                        With a holistic approach to wellness, Trika endeavors to support individuals on their journey towards mental health and fulfillment, helping them navigate life's challenges with grace and resilience.<br />
                                         <br />
-                                        Trika envisions a supportive space where individuals embark on personal wellness journeys, nurturing mind, body, and spirit in a judgment-free environment.
-                                        Its mission: to guide people towards balance and harmony, helping them rediscover their essence and embrace fulfillment through yoga and sound healing therapy .
+                                        Our workshops, retreats, and both online and offline classes offer diverse avenues for exploration and growth.
+                                        Soulful retreats, in particular, provide a unique opportunity to disconnect from the noise of daily life and reconnect with oneself on a deeper level, fostering profound transformation and renewal.
                                     </div>
                                 </div>
                                 <div className="about-us-two_ihbox">

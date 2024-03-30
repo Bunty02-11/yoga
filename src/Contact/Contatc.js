@@ -28,7 +28,7 @@ function Contatc() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post('http://13.126.67.232:8000/api/addcontact ', formData);
+      const response = await axios.post('http://65.1.14.171:8000/api/addcontact ', formData);
       setSuccessMessage('Message sent successfully!');
       setErrorMessage('');
       setFormData({

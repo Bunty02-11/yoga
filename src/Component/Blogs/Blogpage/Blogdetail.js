@@ -11,7 +11,7 @@ function Blogdetail() {
     const param = useParams()
     console.log(param.id, 'd')
     useEffect(() => {
-        axios.get(`http://13.126.67.232:8000/api/blog/${param.id}`)
+        axios.get(`http://65.1.14.171:8000/api/blog/${param.id}`)
             .then(response => {
                 console.log(response.data);
                 setSlides(response.data);

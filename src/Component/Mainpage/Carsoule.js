@@ -22,7 +22,7 @@ function Carsoule() {
     // }, []);
   
     useEffect(() => {
-      axios.get('http://13.126.67.232:8000/api/getimage')
+      axios.get('http://65.1.14.171:8000/api/getimage')
         .then(response => {
           console.log(response.data);
           setSlides(response.data);

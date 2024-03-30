@@ -5,22 +5,24 @@ import { useNavigate } from 'react-router-dom';
 function Yogasection() {
   const navigate = useNavigate();
 
-
   const reloadContactPage = () => {
-      navigate(`/contact`);
-      window.scrollTo(0, 0);
-      window.location.reload();
+    navigate(`/contact`);
+    window.scrollTo(0, 0);
+    window.location.reload();
   };
 
-
   const [services, setServices] = useState([]);
-  const [selectedService, setSelectedService] = useState([]);
+  const [selectedService, setSelectedService] = useState(null);
 
   useEffect(() => {
-    axios.get('http://13.126.67.232:8000/api/get/work')
+    axios.get('http://65.1.14.171:8000/api/get/work')
       .then(response => {
         console.log(response.data);
         setServices(response.data);
+        // Set the first service as the selected service
+        if (response.data.length > 0) {
+          setSelectedService(response.data[0]);
+        }
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -28,8 +30,9 @@ function Yogasection() {
   }, []);
 
   const handleServiceClick = (service) => {
-    console.log(service)
     setSelectedService(service);
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -39,14 +42,14 @@ function Yogasection() {
           <div className="row">
             <div className="col-lg-9 service-right-col">
               {/* Render content based on selected service */}
-              {Object.keys(selectedService).length !== 0 && (
+              {selectedService && (
                 <div key={selectedService._id}>
                   <div className="pbmit-service-feature-image">
                     <img
                       src={selectedService.image}
-                      className="img-fluid "
+                      className="img-fluid"
                       alt=""
-                      style={{ height: '600px', width: '600px' }}
+                      style={{ maxWidth: '100%', height: 'auto' }}
                     />
                   </div>
                   <div className="pbmit-entry-content">
@@ -62,7 +65,20 @@ function Yogasection() {
                           {selectedService.benfits_heading}
                         </h3>
                       </div>
-                      <p>{selectedService.benfits_content}</p>
+                      {/* Rendering benefits content as points */}
+                      {Array.isArray(selectedService.benfits_content) ? (
+                        <ul>
+                          {selectedService.benfits_content.map((benefit, index) => (
+                            <li key={index} style={{ marginBottom: '10px' }}>{benefit}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <ul>
+                          {selectedService.benfits_content.split(/\.\s+/).map((point, index) => (
+                            <li key={index} style={{ marginBottom: '10px' }}>{point}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 </div>
