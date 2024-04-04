@@ -22,10 +22,11 @@ function Motivation() {
     // const content = slides.map(slide => slide.content);
     // const bullet = slides.map(slide => slide.bullet);
 
-
+    https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production
+    // https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production/api/get/motivations
 
     useEffect(() => {
-        axios.get('http://65.1.14.171:8000/api/get/motivations')
+        axios.get('https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production/api/get/motivations')
             .then(response => {
                 console.log(response.data);
                 setData(response.data);

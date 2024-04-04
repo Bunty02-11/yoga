@@ -15,7 +15,7 @@ function Yogasection() {
   const [selectedService, setSelectedService] = useState(null);
 
   useEffect(() => {
-    axios.get('http://65.1.14.171:8000/api/get/work')
+    axios.get('https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production/api/get/work')
       .then(response => {
         console.log(response.data);
         setServices(response.data);
