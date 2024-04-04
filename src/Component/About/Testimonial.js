@@ -8,7 +8,7 @@ function Testimonial() {
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-        axios.get('http://65.1.14.171:8000/api/get/testimonal')
+        axios.get('https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production/api/get/testimonal')
             .then(response => {
                 console.log(response);
                 setTestimonials(response.data);
