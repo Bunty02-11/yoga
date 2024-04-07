@@ -10,17 +10,17 @@ function Footer() {
                 <div className="col-md-8 pbmit-col_1">
                   <ul className="pbmit-icon-list-items pbmit-inline-items">
                     <li className="pbmit-icon-list-item pbmit-inline-item">
-                      <a href="classes.html">
+                      <a>
                         <span className="pbmit-icon-list-text">Classes</span>
                       </a>
                     </li>
                     <li className="pbmit-icon-list-item pbmit-inline-item">
-                      <a href="event-style-1.html">
+                      <a>
                         <span className="pbmit-icon-list-text">Schedule</span>
                       </a>
                     </li>
                     <li className="pbmit-icon-list-item pbmit-inline-item">
-                      <a href="event-single-detail.html">
+                      <a>
                         <span className="pbmit-icon-list-text">Event</span>
                       </a>
                     </li>
@@ -59,7 +59,7 @@ function Footer() {
                             className="__cf_email__"
                             data-cfemail="523b3c343d122b3d3533313320377c313d3f"
                           >
-                            [email&nbsp;protected]
+                            sonia@trika.co.in
                           </a>
                         </h2>
                       </div>

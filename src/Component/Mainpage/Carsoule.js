@@ -24,7 +24,6 @@ function Carsoule() {
     useEffect(() => {
       axios.get('https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production/api/getimage')
         .then(response => {
-          console.log(response.data);
           setSlides(response.data);
         })
         .catch(error => {

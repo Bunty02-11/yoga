@@ -27,7 +27,7 @@ function Motivation() {
     useEffect(() => {
         axios.get('https://r8bkfpncj3.execute-api.ap-south-1.amazonaws.com/production/api/get/motivations')
             .then(response => {
-                console.log(response.data);
+                
                 setData(response.data);
             })
             .catch(error => {
