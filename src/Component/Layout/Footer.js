@@ -99,7 +99,7 @@ function Footer() {
                           <li className="pbmit-social-li pbmit-social-facebook">
                             <a
                               title="Facebook"
-                              href="https://www.facebook.com/"
+                              href="https://www.facebook.com/share/d792zGWX6qpgCq5N/?mibextid=WC7FNe"
                               target="_blank"
                               rel="noopener"
                             >
@@ -135,7 +135,7 @@ function Footer() {
                           <li className="pbmit-social-li pbmit-social-instagram">
                             <a
                               title="Instagram"
-                              href="https://www.instagram.com/"
+                              href="https://www.instagram.com/trika_yoga?igsh=Y25kbjI2N3V5dzcy"
                               target="_blank"
                               rel="noopener"
                             >

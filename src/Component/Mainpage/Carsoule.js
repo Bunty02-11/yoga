@@ -56,7 +56,7 @@ function Carsoule() {
           <div className="pbmit-slider-social">
             <ul className="pbmit-social-links">
               <li className="pbmit-social-li pbmit-social-facebook">
-                <a title="Facebook" href="#" target="_blank">
+                <a title="Facebook" href="https://www.facebook.com/share/d792zGWX6qpgCq5N/?mibextid=WC7FNe" target="_blank">
                   <span>
                     <i className="pbmit-base-icon-facebook-f" />
                   </span>
@@ -77,7 +77,7 @@ function Carsoule() {
                 </a>
               </li>
               <li className="pbmit-social-li pbmit-social-instagram">
-                <a title="Instagram" href="#" target="_blank">
+                <a title="Instagram" href="https://www.instagram.com/trika_yoga?igsh=Y25kbjI2N3V5dzcy" target="_blank">
                   <span>
                     <i className="pbmit-base-icon-instagram" />
                   </span>

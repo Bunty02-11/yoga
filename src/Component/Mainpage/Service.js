@@ -54,8 +54,8 @@ function Service() {
                     <div className="service-three_btn">
                         <a
                             className="pbmit-btn pbmit-btn-outline"
-                            href="service-details.html"
-                        >
+                            onClick={reloadServicePage}                        
+                            >
                             <span className="pbmit-btn-content-wrapper">
                                 <span className="pbmit-button-icon">
                                     <svg
@@ -138,15 +138,6 @@ function Service() {
                                                         <span>{item.serviceDescription}</span>
                                                     </a>
                                                 </span>
-                                                <span className="pbmit-service-btn">
-                                                    <a>
-                                                        <span className="pbmit-button-icon-wrapper">
-                                                            <span className="pbmit-button-icon">
-                                                                <i className="pbmit-base-icon-black-arrow-1" />
-                                                            </span>
-                                                        </span>
-                                                    </a>
-                                                </span>
                                             </h3>
                                             <a className="pbmit-link" />
                                         </li>
@@ -212,15 +203,7 @@ function Service() {
                                                     <span>{item.serviceDescription}</span>
                                                 </a>
                                             </span>
-                                            <span className="pbmit-service-btn">
-                                                <a>
-                                                    <span className="pbmit-button-icon-wrapper">
-                                                        <span className="pbmit-button-icon">
-                                                            <i className="pbmit-base-icon-black-arrow-1" />
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                            </span>
+                                          
                                         </h3>
                                         <a className="pbmit-link" />
                                     </li>
